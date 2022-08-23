@@ -25,7 +25,7 @@ class EventFactory extends Factory
             "spaces" => $this->faker->biasedNumberBetween($min = 10, $max = 20, $function = 'sqrt'),
             "ubication" => $this->faker->Address(),
             "date"=> $this->faker->DateTime(),
-             "musical genre" => $this->faker->company(),
+            "musical genre" => $this->faker->company(),
             
         ];
     }
