@@ -18,7 +18,9 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome'); 
 // });
 
-Route::get('/',[EventController::class, 'index']);
+Route::get('/',[EventController::class, 'index'])->name('welcome');
+
+Route::delete('/delete/{id}', [EventController::class, 'destroy'])->name('delete');
 
 // Auth::routes();
 

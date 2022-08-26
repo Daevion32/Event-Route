@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use App\Models\Event;
+use GuzzleHttp\Promise\Create;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
@@ -27,4 +28,13 @@ class CrudTest extends TestCase
                 ->assertViewIs('welcome');
                 
     }
+
+
+public function test_event_can_be_deleted()
+{
+    $this->withExceptionHandling();
+    $event = Event::factory()->create();
+    $this->assertCount(1, $event::all());
+    $response = $this->delete(route('delete', $event->id))
+}
 }
