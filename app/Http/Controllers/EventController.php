@@ -17,7 +17,7 @@ class EventController extends Controller
         //
         $events = Event::get();
 
-         var_dump($events);
+        // var_dump($events);
 
         return view('welcome', compact('events'));
 
@@ -31,6 +31,7 @@ class EventController extends Controller
     public function create()
     {
         //
+        return view('createEvent');
     }
 
     /**
@@ -42,6 +43,24 @@ class EventController extends Controller
     public function store(Request $request)
     {
         //
+
+        $event = request()->except('_token');
+
+        // $event = Event::create(
+        //     [
+        //         'name' => $request->name,
+        //         'description' => $request->description,
+        //         'image' =>  $request->image,
+        //         'spaces' => $request->spaces,
+        //         'location' =>  $request->location,
+        //         'date' => $request->date,
+                
+        //     ]
+        // );
+        Event::create($event);
+
+        
+        return redirect()->route('home');
     }
 
     /**

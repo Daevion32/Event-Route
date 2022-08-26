@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        /* Event::factory()->create(['name'=>'Mi evento de prueba','description'=> 'Evento fijado de prueba', 'image' => '', 'spaces'=>'15' , 'address'=> 'Direccion', 'music gendre'=> 'Tipo musica']); */
+        Event::factory()->create(['name'=>'Mi evento de prueba','description'=> 'Evento fijado de prueba', 'img' => '', 'spaces'=>'15' , 'adress'=> 'Direccion', 'music gendre'=> 'Tipo musica']);
         Event::factory(50)->create();
     }
 }
