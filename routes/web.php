@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\EventController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,12 +16,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome'); 
-// });
+Route::get('/', function () {
+    return view('welcome'); 
+});
+
+
+
+Auth::routes();
 
 Route::get('/',[EventController::class, 'index']);
+Route::get('/home',[EventController::class, 'index']);
 
-// Auth::routes();
 
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//CREATE
+
+Route::get('/create',[EventController::class, 'create'])->create('createEvent');
+Route::post('/',[EventController::class, 'store'])->create('storeEvent');
