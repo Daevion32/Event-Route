@@ -14,8 +14,8 @@
 }
 .container_spaces {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: flex-end;
+    gap: 5vh;
     
     
     
@@ -55,6 +55,9 @@
 }
 .icon_add{
     margin-right: 3vh;
+}
+.icon_show{
+    margin-top: 0.5vh;
 }
 
 .container_ubication {
