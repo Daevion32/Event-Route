@@ -17,22 +17,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome'); 
+    return view('home'); 
 });
 
 
 
 Auth::routes();
 
-<<< HEAD
-Route::get('/',[EventController::class, 'index'])->name('welcome');
 
-Route::delete('/delete/{id}', [EventController::class, 'destroy'])->name('delete');
-=======
-Route::get('/',[EventController::class, 'index']);
+
+Route::get('/',[EventController::class, 'index'])->name('welcome');
 Route::get('/home',[EventController::class, 'index']);
 
->>>>>>> d997140b28af7ac081f84b234aa5db7ad517881d
+//DELETE
+
+Route::delete('/delete/{id}', [EventController::class, 'destroy'])->name('delete');
 
 //CREATE
 
