@@ -26,14 +26,14 @@ Auth::routes();
 
 
 
-Route::get('/',[EventController::class, 'index'])->name('welcome');
+Route::get('/',[EventController::class, 'index'])->name('home');
 Route::get('/home',[EventController::class, 'index']);
 
 //DELETE
 
-Route::delete('/delete/{id}', [EventController::class, 'destroy'])->name('delete');
+// Route::delete('/delete/{id}', [EventController::class, 'destroy'])->name('delete');
 
-//CREATE
+// //CREATE
 
-Route::get('/create',[EventController::class, 'create'])->create('createEvent');
-Route::post('/',[EventController::class, 'store'])->create('storeEvent');
+// Route::get('/create',[EventController::class, 'create'])->create('createEvent');
+// Route::post('/',[EventController::class, 'store'])->create('storeEvent');

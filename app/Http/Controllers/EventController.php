@@ -19,7 +19,7 @@ class EventController extends Controller
 
         // var_dump($events);
 
-        return view('welcome', compact('events'));
+        return view('home', compact('events'));
 
     }
 
@@ -106,7 +106,7 @@ class EventController extends Controller
     public function destroy($id)
     {
         Event::destroy($id);
-        return redirect()->route('welcome');
+        return redirect()->route('home');
     
     } 
 }
