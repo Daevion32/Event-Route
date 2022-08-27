@@ -24,7 +24,7 @@ class CrudTest extends TestCase
         $events = Event::factory(2)->create();
 
         $response = $this->get('/');
-        $response->assertStatus(500)
+        $response->assertStatus(200)
                 ->assertViewIs('home');
     }
 
@@ -35,8 +35,8 @@ class CrudTest extends TestCase
         $event = Event::factory()->create();
         $this->assertCount(1, $event::all());
         $response = $this->delete(route('delete', $event->id));
-<<<<<<< HEAD
-        this->assertCount(0, Event::all());
+
+        $this->assertCount(0, Event::all());
     }
 
     public function test_a_event_can_be_create(){
@@ -44,11 +44,13 @@ class CrudTest extends TestCase
         $response = $this->post(route('storeEvent'),[
                 'name' => 'new name',
                 'description' => 'description',
+                'image' => 'new image',
+                'spaces'=> '50',
+                'location' => 'location',
                 
-        ]);
+        ]); 
+        $this->assertCount(1, Event::all());
 
-=======
->>>>>>> 7ed61434d6c84221fd73d18f4dac3daeecadd7ba
     }
 }
 
