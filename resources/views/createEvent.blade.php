@@ -1,6 +1,6 @@
 @extends('layouts.app')
 <form action="{{route('storeEvent')}}" method="post">
-@csrf
+  @csrf
   <div class="mb-3">
     <label for="inputName" class="form-label">Nombre:</label>
     <input type="text" class="form-control" id="inputName">
@@ -25,7 +25,7 @@
     <label for="inputImage" class="form-label">Imagen:</label>
     <input type="text" class="form-control" id="inputImage">
   </div>
-  
+
   <button type="submit" class="btn btn-primary" value="create">Enviar</button>
   <button type="back" class="btn btn-primary" href="{{route('home')}}">Volver</button>
 
