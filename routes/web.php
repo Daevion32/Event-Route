@@ -20,17 +20,11 @@ Route::get('/', function () {
     return view('home'); 
 });
 
-
-
 Auth::routes();
 
-
-Route::get('/home',[EventController::class, 'index']);
 Route::get('/',[EventController::class, 'index'])->name('home');
 
-
 //DELETE
-
 Route::delete('/delete/{id}', [EventController::class, 'destroy'])->name('delete');
 
 // //CREATE

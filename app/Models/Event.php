@@ -16,7 +16,7 @@ class Event extends Model
         "spaces",
         "location",
         "date",
-        "musical genre",
+        "musical_genre",
 
     ];
 }
