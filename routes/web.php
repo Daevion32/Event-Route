@@ -35,5 +35,5 @@ Route::delete('/delete/{id}', [EventController::class, 'destroy'])->name('delete
 
 // //CREATE
 
-// Route::get('/create',[EventController::class, 'create'])->create('createEvent');
-// Route::post('/',[EventController::class, 'store'])->create('storeEvent');
+Route::get('/create',[EventController::class, 'create'])->create('createEvent');
+Route::post('/',[EventController::class, 'store'])->create('storeEvent');
