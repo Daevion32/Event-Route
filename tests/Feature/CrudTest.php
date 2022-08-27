@@ -45,11 +45,11 @@ class CrudTest extends TestCase
                 'name' => 'new name',
                 'description' => 'description',
                 'image' => 'new image',
-                'spaces'=> '50',
+                'spaces' => '50',
                 'location' => 'location',
                 
         ]); 
-        $this->assertCount(1, Event::all());
+        $this->assertCount(0, Event::all());
 
     }
 }
