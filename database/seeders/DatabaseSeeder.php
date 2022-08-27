@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
         Event::factory()->create(['name'=>'Mi evento de prueba','description'=> 'Evento fijado de prueba', 'img' => '', 'spaces'=>'15' , 'adress'=> 'Direccion', 'music gendre'=> 'Tipo musica']);
-        Event::factory(50)->create();
+        Event::factory(20)->create();
     }
     //User::factory()→create([’name’ ⇒ ‘Admin’, ‘email’ ⇒ ‘admin@admin.com’, ‘password’ ⇒’micontraseña’]);
 
