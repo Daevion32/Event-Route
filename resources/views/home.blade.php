@@ -99,7 +99,7 @@
                     </div>
 
                     <div class="space-x-2 flex  container_spaces">
-                        <!-- <p class="card-text"><small class="text-muted">{{ $event-> spaces}} pax</small></p> -->
+                        
                         <button class="h-10 px-6 font-semibold rounded-md bg-red text-white button_space" type="submit"> {{ $event-> spaces}} pax</button>
 
                         <svg class="icon_show" width="30" height="" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -111,13 +111,8 @@
                             </svg>
                         </a>
                     </div>
-
                 </div>
-
             </div>
-
-            @endforeach
-
         </div>
 
     </div>

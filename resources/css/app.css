@@ -4,7 +4,11 @@
     width: 1000px;
 }  */
 
-.container_cards {
+.main{
+    display: flex;
+}
+
+.container_cards{
     display: flex;
 }
 
@@ -17,15 +21,19 @@
     display: flex;
     justify-content: flex-end;
     gap: 5vh;
+    
+
 }
 
-.container_image {
+.container_image{
     margin-top: 10px;
 }
 
 .container_title {
     padding: 10px;
     display: flex;
+    gap: 15vh;
+    
 }
 
 .icon_title {
@@ -54,9 +62,14 @@
 .icon_add {
     margin-right: 3vh;
 }
-
-.icon_show {
+/* .icon_show{
     margin-top: 0.5vh;
+} */
+.button_add{
+background-color: orange;
+border-radius: 20px;
+font-size: 2vh;
+margin-bottom: 2vh;
 }
 
 .container_ubication {
