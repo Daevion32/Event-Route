@@ -1,33 +1,31 @@
- /* .container_all{
+/* .container_all{
     display: flex;
     height: 1000px;
     width: 1000px;
 }  */
 
-
-.container_cards{
+.container_cards {
     display: flex;
 }
-.form-group{
+
+.form-group {
     display: flex;
     background-color: #006571;
 }
+
 .container_spaces {
     display: flex;
     justify-content: flex-end;
     gap: 5vh;
-    
-    
-    
-    
 }
-.container_image{
+
+.container_image {
     margin-top: 10px;
 }
-.container_title{
+
+.container_title {
     padding: 10px;
     display: flex;
-    
 }
 
 .icon_title {
@@ -44,25 +42,28 @@
 
 .container_date {
     display: flex;
-
 }
 
 .button_space {
     border-radius: 20px;
-    background-color:#006571;
+    background-color: #006571;
     font-size: 2vh;
     margin-bottom: 2vh;
 }
-.icon_add{
+
+.icon_add {
     margin-right: 3vh;
 }
-.icon_show{
+
+.icon_show {
     margin-top: 0.5vh;
 }
 
 .container_ubication {
     display: flex;
 }
-img{
+
+img {
     margin-top: 2vh;
 }
+
