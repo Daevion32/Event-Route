@@ -28,6 +28,7 @@ class CrudTest extends TestCase
                 ->assertViewIs('home');
     }
 
+/*eliminado */
 
     public function test_event_can_be_deleted()
     {
