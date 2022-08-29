@@ -1,7 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,11 +17,18 @@ use App\Http\Controllers\EventController;
 
 
 Route::get('/', function () {
-    return view('welcome');
-});*/
-
+    return view('home'); 
+});
 
 Route::get('/',[EventController::class,'index'])->name('home');
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
+Route::get('/',[EventController::class, 'index'])->name('home');
+
+//DELETE
+Route::delete('/delete/{id}', [EventController::class, 'destroy'])->name('delete');
+
+// //CREATE
+
+Route::get('/create',[EventController::class, 'create'])->name('createEvent');
+Route::post('/',[EventController::class, 'store'])->name('storeEvent');

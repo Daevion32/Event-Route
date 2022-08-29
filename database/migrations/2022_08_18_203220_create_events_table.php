@@ -20,9 +20,9 @@ return new class extends Migration
             $table->string("description",250);
             $table->string("image");
             $table->integer("spaces");
-            $table->string("ubication",250);
+            $table->string("location",250);
             $table->string("date");
-            $table->string("musical genre",250);
+            $table->string("musical_genre",250);
 
             $table->timestamps();
         });

@@ -16,18 +16,14 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
-
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        Event::factory(15)->create(['name'=>'Evento de Prueba','description'=>'aqui se dejara una breve descripcion del evento',
-                                    'image'=>'https://festibulo.files.wordpress.com/2022/08/captura-6.jpg?w=688',
-                                    'spaces'=>'300','ubication'=>'Asturias',
-                                    ]);
-       //Event::factory(20)->create();
-    //    User::factory()->create(['name' => 'Administardor', 'email' => 'Admin@admin.com'], );
-    //    User::factory()->create(['name' => 'User1', 'email' => 'User1@user1.com'],);
-                                    
+        Event::factory()->create(['name'=>'Mi evento de prueba','description'=> 'Evento fijado de prueba', 'image' => '', 'spaces'=>'15' , 'location'=> 'Direccion', 'date' => '1200-23-02', 'musical_genre' => 'Tipo musica']);
+        Event::factory(20)->create();
     }
+    //User::factory()→create([’name’ ⇒ ‘Admin’, ‘email’ ⇒ ‘admin@admin.com’, ‘password’ ⇒’micontraseña’]);
+
 }
+

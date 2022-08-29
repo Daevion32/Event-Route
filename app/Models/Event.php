@@ -14,9 +14,9 @@ class Event extends Model
         "description",
         "image",
         "spaces",
-        "ubication",
+        "location",
         "date",
-        "musical genre",
+        "musical_genre",
 
     ];
 }

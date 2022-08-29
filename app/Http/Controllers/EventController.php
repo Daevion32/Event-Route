@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Event;
+
+use  App\Models\Event;
 use Illuminate\Http\Request;
 
 class EventController extends Controller
@@ -15,10 +16,11 @@ class EventController extends Controller
     {
         //
         $events = Event::get();
-        
-        //var_dump($events);
 
-        return view('home',compact('events'));
+        // var_dump($events);
+
+        return view('home', compact('events'));
+
     }
 
     /**
@@ -29,6 +31,7 @@ class EventController extends Controller
     public function create()
     {
         //
+        return view('createEvent');
     }
 
     /**
@@ -40,6 +43,24 @@ class EventController extends Controller
     public function store(Request $request)
     {
         //
+
+        $event = request()->except('_token');
+
+        // $event = Event::create(
+        //     [
+        //         'name' => $request->name,
+        //         'description' => $request->description,
+        //         'image' =>  $request->image,
+        //         'spaces' => $request->spaces,
+        //         'location' =>  $request->location,
+        //         'date' => $request->date,
+                
+        //     ]
+        // );
+        Event::create($event);
+
+        
+        return redirect()->route('home');
     }
 
     /**
@@ -84,6 +105,8 @@ class EventController extends Controller
      */
     public function destroy($id)
     {
-        //
-    }
+        Event::destroy($id);
+        return redirect()->route('home');
+    
+    } 
 }

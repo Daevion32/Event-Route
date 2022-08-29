@@ -23,9 +23,9 @@ class EventFactory extends Factory
             "description" => $this->faker->realText(),
             "image" => $this->faker->Image(),
             "spaces" => $this->faker->biasedNumberBetween($min = 10, $max = 20, $function = 'sqrt'),
-            "ubication" => $this->faker->Address(),
+            "location" => $this->faker->Address(),
             "date"=> $this->faker->DateTime(),
-             "musical genre" => $this->faker->company(),
+            "musical_genre" => $this->faker->company()
             
         ];
     }
