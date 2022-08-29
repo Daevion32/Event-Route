@@ -119,7 +119,7 @@
     </div>
 
 
-<input  class="btn btn-primary btn-padding-y" id="addNewEvent" type=submit" value="Nuevo Evento"> 
+<input  class="btn btn-primary btn-padding-y" id="addNewEvent" type="submit" value="Nuevo Evento"> 
 
 
 @endsection
