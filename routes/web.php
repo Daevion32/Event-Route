@@ -23,3 +23,8 @@ Route::get('/',[EventController::class,'index'])->name('home');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
+
+
+//show 
+
+Route::get('/show/{id}',[EventController:: class,'show'])->name("showEvent");

@@ -1,77 +1,96 @@
- /* .container_all{
+  /* .container_all{
     display: flex;
-    height: 1000px;
-    width: 1000px;
-}  */
-
-.main{
-    display: flex;
-}
-
-.container_cards{
-    display: flex;
-}
-.form-group{
-    display: flex;
-    background-color: #006571;
-}
-.container_spaces {
-    display: flex;
-    justify-content: flex-end;
-    gap: 5vh;
-    
-
-}
-
-.container_image{
-    margin-top: 10px;
-}
-.container_title{
-    padding: 10px;
-    display: flex;
-    gap: 15vh;
-    
-}
-
-.icon_title {
-    gap: 10px;
-    display: flex;
-    padding: 5px;
-    align-content: center;
     justify-content: center;
-    border-radius: 15px;
-    width: 5rem;
-    height: 2rem;
-    background-color: white;
-}
+  
+}  */
+  .container_show {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      
+  }
+  .card_show{
+    height: 40vh;
+    width: 40vh;
+  }
 
-.container_date {
+  .hola {
+      display: flex;
+      justify-content: center;
+      background-color: aquamarine;
+ }
+ .buttons_cardShow{
     display: flex;
+    justify-content:flex-end;
+    gap:5vh;
+ }
 
-}
 
-.button_space {
-    border-radius: 20px;
-    background-color:#006571;
-    font-size: 2vh;
-    margin-bottom: 2vh;
-}
-.icon_add{
-    margin-right: 3vh;
-}
-/* .icon_show{
-    margin-top: 0.5vh;
-} */
-.button_add{
-background-color: orange;
-border-radius: 20px;
-font-size: 2vh;
-margin-bottom: 2vh;
-}
+  .form-group {
+      display: flex;
+      background-color: #006571;
+  }
 
-.container_ubication {
-    display: flex;
-}
-img{
-    margin-top: 2vh;
-}
+  .container_spaces {
+      display: flex;
+      justify-content: flex-end;
+      gap: 5vh;
+
+
+  }
+
+  .container_image {
+      margin-top: 10px;
+  }
+
+  .container_title {
+      padding: 10px;
+      display: flex;
+      gap: 15vh;
+
+  }
+
+  .icon_title {
+      gap: 10px;
+      display: flex;
+      padding: 5px;
+      align-content: center;
+      justify-content: center;
+      border-radius: 15px;
+      width: 5rem;
+      height: 2rem;
+      background-color: white;
+  }
+
+  .container_date {
+      display: flex;
+
+  }
+
+  .button_space {
+      border-radius: 20px;
+      background-color: #006571;
+      font-size: 2vh;
+      margin-bottom: 2vh;
+  }
+
+  .icon_add {
+      margin-right: 3vh;
+  }
+
+
+  .button_add {
+      background-color: orange;
+      border-radius: 20px;
+      font-size: 2vh;
+      margin-bottom: 2vh;
+  }
+
+  .container_ubication {
+      display: flex;
+  }
+
+  img {
+      margin-top: 2vh;
+  }
