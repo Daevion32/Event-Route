@@ -32,9 +32,13 @@
     <label for="inputGenre" class="form-label">Musical genre:</label>
     <input type="text" class="form-control" id="inputGenre" name="musical_genre">
   </div>
-
   <button type="submit" class="btn btn-primary" value="create">Enviar</button>
-  <button type="back" class="btn btn-primary" href="{{ route('home') }}">Volver</button>
 
+  
 </form>
+
+
+  <a href="{{ route('home') }}">
+    <button type="back" class="btn btn-primary">Volver</button>
+  </a>
 @endsection

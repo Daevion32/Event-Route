@@ -17,7 +17,7 @@ class EventController extends Controller
         //
         $events = Event::get();
 
-        // var_dump($events);
+        //var_dump($events);
 
         return view('home', compact('events'));
 
@@ -72,6 +72,9 @@ class EventController extends Controller
     public function show($id)
     {
         //
+        $event = Event::find($id);
+
+        return view ('showEvent', compact('event'));
     }
 
     /**
