@@ -17,7 +17,7 @@ class CrudTest extends TestCase
      */
     use RefreshDatabase;
 
-    public function test_list_event_appear_in_welcomepage()
+    public function test_list_event_appear_in_home()
     {
         $this->withExceptionHandling();
 
@@ -53,6 +53,12 @@ class CrudTest extends TestCase
         ]);
         $this->assertCount(1, Event::all());
     }
+
+    // public function test_a_event_appear_in_show(){
+    //     $this->withExceptionHandling();
+    //     $event = Event::factory(2)->create();
+    //     $response = $this->get(route('/home', $event->id)
+    //                 ->assertStatus(200);
+ //}
+
 }
-
-

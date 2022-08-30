@@ -32,3 +32,9 @@ Route::delete('/delete/{id}', [EventController::class, 'destroy'])->name('delete
 
 Route::get('/create',[EventController::class, 'create'])->name('createEvent');
 Route::post('/',[EventController::class, 'store'])->name('storeEvent');
+
+
+
+//SHOW
+
+Route::get('/show/{id}',[EventController::class, 'show'])->name('showEvent');
