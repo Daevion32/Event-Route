@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 |*/
 
 
-/* Route::get('/', function () {
+Route::get('/', function () {
     return view('home'); 
-}); */
+}); 
 
 
 Auth::routes();
@@ -32,3 +32,12 @@ Route::delete('/delete/{id}', [EventController::class, 'destroy'])->name('delete
 
 Route::get('/create',[EventController::class, 'create'])->name('createEvent');
 Route::post('/',[EventController::class, 'store'])->name('storeEvent');
+
+//SHOW
+
+Route::get('/show/{id}',[EventController::class, 'show'])->name('showEvent');
+
+//UPDATE
+
+Route::get('/edit/{id}', [EventController::class, 'edit'])->name('editEvent');
+ROute::patch('/event/{id}', [EventController::class, 'update'])->name('updateEvent');
