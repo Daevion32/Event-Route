@@ -28,3 +28,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
 //show 
 
 Route::get('/show/{id}',[EventController:: class,'show'])->name("showEvent");
+
+//inscribir---Desinscribirse.
+
+// Route::get('/inscribir/{id}',[  EventController:: class,'inscribir'])->name('inscribir');

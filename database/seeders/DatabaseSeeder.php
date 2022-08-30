@@ -46,7 +46,7 @@ class DatabaseSeeder extends Seeder
         ]);
         Event::factory()->create([
             'name' => 'Minimal-Tech', 'description' => 'Lorem ipsum dolor sit amet consectetur adipiscing elit cras, per tristique conubia leo iaculis',
-            'image' => 'https://allmusicspain.com/wp-content/uploads/2021/12/WhatsApp-Image-2021-12-07-at-18.37.18.jpeg',
+            'image' => 'https://static.roland.com/assets/images/products/gallery/rc_sdz075_minimal_techno_gal.jpg',
             'spaces' => '90', 'ubication' => 'Madrid/España',
             
         ]);
