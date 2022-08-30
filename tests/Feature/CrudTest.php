@@ -3,10 +3,13 @@
 namespace Tests\Feature;
 
 use App\Models\Event;
+use App\Models\User;
 use GuzzleHttp\Promise\Create;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
+
+
 
 class CrudTest extends TestCase
 {
@@ -33,8 +36,19 @@ class CrudTest extends TestCase
     public function test_event_can_be_deleted()
     {
         $this->withExceptionHandling();
+
         $event = Event::factory()->create();
         $this->assertCount(1, $event::all());
+
+        $userNoAdmin = User::factory()->create([
+            'isAdmin' => false]);
+        $this->actingAs($userNoAdmin);
+        $response = $this->delete(route('delete', $event->id));
+        $this->assertCount(1, Event::all());
+
+        $userAdmin = User::factory()->create([
+            'isAdmin' => true]);
+        $this->actingAs($userAdmin);
         $response = $this->delete(route('delete', $event->id));
 
         $this->assertCount(0, Event::all());
@@ -42,6 +56,7 @@ class CrudTest extends TestCase
 
     public function test_a_event_can_be_create(){
         $this->withExceptionHandling();
+        
         $response = $this->post(route('storeEvent'),[
                 'name' => 'name',
                 'description' => 'description',
@@ -52,6 +67,7 @@ class CrudTest extends TestCase
                 'musical_genre' => 'musical_genre'
         ]);
         $this->assertCount(1, Event::all());
+
     }
 
 
