@@ -78,14 +78,15 @@
                         @endif
                         
                         @if (Route::has('createEvent'))
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('createEvent') }}">
-                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M15 25V15M15 15V5M15 15H25M15 15H5" stroke="white" stroke-width="5.83333" stroke-linecap="round" />
-                                </svg>
-                            </a>
-                        </li>
-
+                            
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('createEvent') }}">
+                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15 25V15M15 15V5M15 15H25M15 15H5" stroke="white" stroke-width="5.83333" stroke-linecap="round" />
+                                        </svg>
+                                    </a>
+                                </li>
+                        
                         @endif
                         @else
                         <li class="nav-item dropdown">
