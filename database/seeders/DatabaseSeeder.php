@@ -27,9 +27,9 @@ class DatabaseSeeder extends Seeder
             'spaces' => '300', 'ubication' => 'España/Asturias',
         ]);
         Event::factory()->create([
-            'name' => 'Pal Mundo', 'description' => 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.',
-            'image' => 'https://partyflock.nl/images/party/262189_1200x1693_336204/Festival-Pal-Mundo.webp',
-            'spaces' => '80', 'ubication' => 'Holanda/Den Haag, 2533',
+            'name' => 'Monolink', 'description' => 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.',
+            'image' => 'https://pbs.twimg.com/media/FNlqB2aVkAI_og9?format=jpg&name=large',
+            'spaces' => '80', 'ubication' => 'Mallorca',
             
         ]);
         Event::factory()->create([
@@ -74,6 +74,13 @@ class DatabaseSeeder extends Seeder
             'spaces' => '999', 'ubication' => 'Belgica',
             
         ]);
+        Event::factory()->create([
+            'name' => 'Amsterdam-Lights', 'description' => 'aqui se dejara una breve descripcion del evento',
+            'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG7XzHTB3gCplUxNxrrh83IcDjwEBdyMVlyQ&usqp=CAU',
+            'spaces' => '999', 'ubication' => 'Holanda',
+            
+        ]);
+         
          
 
 
