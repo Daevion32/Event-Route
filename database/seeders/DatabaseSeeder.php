@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
         Event::factory()->create([
             'name' => 'Monolink', 'description' => 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.',
             'image' => 'https://pbs.twimg.com/media/FNlqB2aVkAI_og9?format=jpg&name=large',
-            'spaces' => '80', 'ubication' => 'Mallorca',
+            'spaces' => '80', 'location' => 'Mallorca',
             
         ]);
         Event::factory()->create([
@@ -48,7 +48,7 @@ class DatabaseSeeder extends Seeder
         Event::factory()->create([
             'name' => 'Minimal-Tech', 'description' => 'Lorem ipsum dolor sit amet consectetur adipiscing elit cras, per tristique conubia leo iaculis',
             'image' => 'https://static.roland.com/assets/images/products/gallery/rc_sdz075_minimal_techno_gal.jpg',
-            'spaces' => '90', 'ubication' => 'Madrid/España',
+            'spaces' => '90', 'location' => 'Madrid/España',
             
         ]);
         Event::factory()->create([
@@ -77,5 +77,13 @@ class DatabaseSeeder extends Seeder
         ]);
         User::factory()->create(['name' => 'admin', 'email' => 'admin@admin.com', 'isAdmin' => true]);
         User::factory()->create(['name' => 'user1', 'email' => 'user1@user1.com', 'isAdmin' => false]);
-    }
+
+        // Event::factory()
+        //         ->has(User::factory()->count(20))
+        //         ->create();
+
+        // User::factory()
+        //         ->has(Event::factory()->count(20))  
+        //         ->create(); 
+    }           
 }

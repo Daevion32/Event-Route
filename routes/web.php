@@ -43,3 +43,7 @@ Route::get('/show/{id}',[EventController::class, 'show'])->name('showEvent');
 Route::get('/edit/{id}', [EventController::class, 'edit'])->name('editEvent')->middleware('isadmin', 'auth');
 ROute::patch('/event/{id}', [EventController::class, 'update'])->name('updateEvent');
 
+//Inscribirse - Desinscribirse
+
+Route::get('/inscribe/{id}', [EventController::class, 'inscribe'])->middleware('auth')->name('inscribe');
+Route::get('/cancelInscription/{id}', [EventController::class, 'cancelInscription'])->middleware('auth')->name('cancelInscription');

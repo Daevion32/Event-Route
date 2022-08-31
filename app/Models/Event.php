@@ -19,4 +19,9 @@ class Event extends Model
         "musical_genre",
 
     ];
+
+    public function user(){
+        return $this->belongsToMany(User::class);
+
+    }
 }

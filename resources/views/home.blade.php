@@ -111,7 +111,9 @@
                             </svg>
                         </a>
 
-                        <button class="h-10 px-6 font-semibold rounded-md bg-red text-white button_add" type="submit">Inscribete</button>
+
+                        <button class="h-10 px-6 font-semibold rounded-md bg-red text-white button_add" type="submit">
+                            <a href="{{ route('inscribe', $event->id)}}">Inscribete</a></button>
                             @if(Auth::check() && Auth::user()->isAdmin)                                  
                                 <a class="addButtonSlider">
                                     <svg class="icon_add" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
