@@ -28,7 +28,7 @@ class DatabaseSeeder extends Seeder
         Event::factory()->create([
             'name' => 'Monolink', 'description' => 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.',
             'image' => 'https://pbs.twimg.com/media/FNlqB2aVkAI_og9?format=jpg&name=large',
-            'spaces' => '80', 'ubication' => 'Mallorca',
+            'spaces' => '80', 'location' => 'Mallorca',
             
         ]);
         Event::factory()->create([
@@ -46,7 +46,7 @@ class DatabaseSeeder extends Seeder
         Event::factory()->create([
             'name' => 'Minimal-Tech', 'description' => 'Lorem ipsum dolor sit amet consectetur adipiscing elit cras, per tristique conubia leo iaculis',
             'image' => 'https://static.roland.com/assets/images/products/gallery/rc_sdz075_minimal_techno_gal.jpg',
-            'spaces' => '90', 'ubication' => 'Madrid/España',
+            'spaces' => '90', 'location' => 'Madrid/España',
             
         ]);
         Event::factory()->create([
@@ -70,13 +70,13 @@ class DatabaseSeeder extends Seeder
         Event::factory()->create([
             'name' => 'Tomorrow Land', 'description' => 'aqui se dejara una breve descripcion del evento',
             'image' => 'https://i.pinimg.com/originals/56/fb/30/56fb306e2b834858c432604cbb2324fd.jpg',
-            'spaces' => '999', 'ubication' => 'Belgica',
+            'spaces' => '999', 'location' => 'Belgica',
             
         ]);
         Event::factory()->create([
-            'name' => 'Amsterdam-Lights', 'description' => 'aqui se dejara una breve descripcion del evento',
+            'name' => 'AmsterdamLights', 'description' => 'aqui se dejara una breve descripcion del evento',
             'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG7XzHTB3gCplUxNxrrh83IcDjwEBdyMVlyQ&usqp=CAU',
-            'spaces' => '999', 'ubication' => 'Holanda',
+            'spaces' => '999', 'location' => 'Holanda',
             
         ]);
          

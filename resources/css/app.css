@@ -1,110 +1,126 @@
+.container_show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card_form{
+    /* background-color: #006571; */
+    height: 40vh;
+    width: 100vh;
 
-  .container_show {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      
-      
-  }
-  .card_show{
+
+}
+.form_all{
+    background-color: #FFECD1;
+}
+.title_edit{
+    display: flex;
+    justify-content:center;
+}
+
+.card_show {
     height: 40vh;
     width: 40vh;
-  }
-  @media (min-width: 820px){
-    .hola {
+}
+@media (min-width: 820px) {
+    .container_cards {
         display: flex;
-        
+
         flex-direction: column-reverse;
         align-items: center;
-        flex-wrap: wrap; 
-        background-color:lightgray; 
+        flex-wrap: wrap;
+        background-color: lightgray;
         /* background-image: url(https://img.freepik.com/vector-gratis/fondo-marmol-liquido-realista-oro_23-2148897013.jpg?w=2000); */
-   
-   } 
-  }
-  .img_cardShow{
+
+    }
+}
+
+.img_cardShow {
     margin: auto;
-  }
-  
+}
 
- .buttons_cardShow{
+
+.buttons_cardShow {
     display: flex;
-    justify-content:flex-end;
-    gap:6vh;
- }
+    justify-content: flex-end;
+    gap: 6vh;
+}
 
 
-  .form-group {
-      display: flex;
-      background-color: #006571;
-  }
+.form-group {
+    display: flex;
+    background-color: #006571;
+}
 
-  .container_spaces {
-      display: flex;
-      justify-content: flex-end;
-      gap: 5vh;
+.container_spaces {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5vh;
 
 
-  }
-  .card_textshow{
+}
+
+.card_textshow {
     background-color: #FFECD1;
-  }
-  .btn_home{
+}
+
+.btn_home {
     margin-top: 2vh;
-  }
+}
 
-  .container_image {
-      margin-top: 10px;
-  }
+.container_image {
+    margin-top: 10px;
+}
 
-  .container_title {
-      padding: 30px;
-      display: flex;
-      justify-content: flex-start;
-      
-
-  }
-
-  .icon_title {
-      gap: 5px;
-      display: flex;
-      padding: 5px;
-      align-content: center;
-      justify-content: center;
-      border-radius: 15px;
-      width: 5rem;
-      height: 2rem;
-      background-color: white;
-  }
-
-  .container_date {
-      display: flex;
-
-  }
-
-  .button_space {
-      border-radius: 20px;
-      background-color: #006571;
-      font-size: 2vh;
-      margin-bottom: 2vh;
-  }
-
-  .icon_add {
-      margin-right: 3vh;
-  }
+.container_title {
+    padding: 30px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10vh;
 
 
-  .button_add {
-      background-color: orange;
-      border-radius: 20px;
-      font-size: 2vh;
-      margin-bottom: 2vh;
-  }
+}
 
-  .container_ubication {
-      display: flex;
-  }
+.icon_title {
+    gap: 5px;
+    display: flex;
+    padding: 5px;
+    align-content: center;
+    justify-content: center;
+    border-radius: 15px;
+    width: 5rem;
+    height: 2rem;
+    background-color: white;
+}
 
-  img {
-      margin-top: 2vh;
-  }
+.container_date {
+    display: flex;
+
+}
+
+.button_space {
+    border-radius: 20px;
+    background-color: #006571;
+    font-size: 2vh;
+    margin-bottom: 2vh;
+}
+
+.icon_add {
+    margin-right: 3vh;
+}
+
+
+.button_add {
+    background-color: orange;
+    border-radius: 20px;
+    font-size: 2vh;
+    margin-bottom: 2vh;
+}
+
+.container_ubication {
+    display: flex;
+}
+
+img {
+    margin-top: 2vh;
+}
