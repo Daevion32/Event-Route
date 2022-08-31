@@ -23,7 +23,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/',[EventController::class, 'index'])->name('home');
+Route::get('/',[EventController::class, 'index']);
+Route::get('/home', [EventController::class, 'index'])->name('home'); 
 
 //DELETE
 Route::delete('/delete/{id}', [EventController::class, 'destroy'])->name('delete')->middleware('isadmin', 'auth');
