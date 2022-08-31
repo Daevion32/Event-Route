@@ -68,7 +68,7 @@
                                             </svg>
                                     </a>
                         @endif
-                                       <form action="{{ route('delete',['id'=> $event->id])}}" method="post">
+                                    <form action="{{ route('delete',['id'=> $event->id])}}" method="post">
                                         @method('delete')
                                         @csrf
                                         <button type="submit" 
