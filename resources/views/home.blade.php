@@ -56,11 +56,17 @@
         <div class="card text-bg-dark mb-3 card_all" style="max-width: 540px;">
             <div class="row g-0">
                 <div class="col-md-4 container_image">
-                    <img src=" {{ $event->image}} " class="img-fluid rounded-start imagecard" alt="image">
+                    <a href="{{ route('showEvent',$event->id) }}"> 
+                    <img src=" {{ $event->image}} " class="img-fluid rounded-start imagecard" alt="image">        
+                </a>
+                  
+
                 </div>
                 <div class="col-md-8">
                     <div class="container_title">
                         <h1 class="card-title">{{ $event->name}}</h1>
+
+
                         @if(Auth::check() && Auth::user()->isAdmin)                                  
 
                         <div class="icon_title">
