@@ -79,6 +79,7 @@
                         
                         @if (Route::has('createEvent'))
                             
+                        
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('createEvent') }}">
                                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
