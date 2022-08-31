@@ -3,7 +3,7 @@
 
 @section('content')
 
-<div style="background-color: #15616D; text-align=center; padding: 2vh; margin: 2vh 0 2vh 0">
+<div style="background-color: #15616D; text-align:center; padding: 2vh; margin: 2vh 0 2vh 0">
     <h3 style="text-align:center; color:white; font-weight: 400">¡Echa un vistazo a nuestros eventos destacados!</h3>
 </div>
     <div class="p-3 m-0 border-0 bd-example">   
