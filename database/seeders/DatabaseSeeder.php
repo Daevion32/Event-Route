@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-//use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Event;
 use App\Models\User;
 use Illuminate\Database\Seeder;
@@ -75,7 +75,7 @@ class DatabaseSeeder extends Seeder
             'spaces' => '999', 'location' => 'Belgica',
 
         ]);
-        User::factory()->create(['name' => 'Admin', 'email' => 'admin@admin.com', 'isAdmin' => true]);
+        User::factory()->create(['name' => 'admin', 'email' => 'admin@admin.com', 'isAdmin' => true]);
         User::factory()->create(['name' => 'user1', 'email' => 'user1@user1.com', 'isAdmin' => false]);
     }
 }
