@@ -52,3 +52,7 @@ Route::get('sliders', [SliderController::class,'index'])->name('sliders');
 
 Route::get('/inscribe/{id}', [EventController::class, 'inscribe'])->middleware('auth')->name('inscribe');
 Route::get('/cancelInscription/{id}', [EventController::class, 'cancelInscription'])->middleware('auth')->name('cancelInscription');
+
+//Eventos Registrados.
+
+Route::get('/eventRegistrer', [EventController::class, 'eventRegistrer'])->middleware('auth')->name('eventRegistrer');

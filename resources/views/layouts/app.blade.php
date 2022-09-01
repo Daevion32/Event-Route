@@ -107,7 +107,12 @@
                             </div>
                         </li>
                         @endguest
+                        <li>
+                            <a href="{{ route('eventRegistrer')}}">HOLA</a>
+                        </li>
                     </ul>
+
+                    
                 </div>
             </div>
         </nav>

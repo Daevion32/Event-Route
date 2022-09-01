@@ -144,6 +144,14 @@ img {
     font-size: 1.4rem;
 }
 
+.form-label {
+    display: block;
+    color: aliceblue;
+    margin: auto;
+}
+
+
+/** Buttons **/
 
 /** CREATE EVENT**/
 
