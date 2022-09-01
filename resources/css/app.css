@@ -17,11 +17,11 @@
     display: flex;
     justify-content: flex-end;
     gap: 5vh;
-    
+
 
 }
 
-.container_image{
+.container_image {
     margin-top: 10px;
 }
 
@@ -29,7 +29,7 @@
     padding: 10px;
     display: flex;
     gap: 15vh;
-    
+
 }
 
 .icon_title {
@@ -58,14 +58,15 @@
 .icon_add {
     margin-right: 3vh;
 }
+
 /* .icon_show{
     margin-top: 0.5vh;
 } */
-.button_add{
-background-color: orange;
-border-radius: 20px;
-font-size: 2vh;
-margin-bottom: 2vh;
+.button_add {
+    background-color: orange;
+    border-radius: 20px;
+    font-size: 2vh;
+    margin-bottom: 2vh;
 }
 
 .container_ubication {
@@ -76,3 +77,129 @@ img {
     margin-top: 2vh;
 }
 
+
+/** CREATE EVENT**/
+
+/**text**/
+
+.subtitle-create {
+    display: inherit;
+    margin: 0 auto;
+    padding: 1rem;
+    margin-top:1rem ;
+    margin-bottom: -1rem;
+}
+
+.text-subtitle {
+    text-align: center;
+    text-size-adjust: auto;
+    font-size: 1.4rem;
+}
+
+.legend {
+    color: aliceblue;
+    text-align: center;
+}
+
+/** Layout **/
+.grid-temaplete {
+    padding: 1.5rem;
+}
+
+
+.div-form {
+    background-color: #001326d0;
+    margin: auto;
+    padding: 2rem;
+    height: 90%;
+    width: 90%;
+    border-radius:15px ;
+}
+
+.form-label {
+    display: block;
+    color: aliceblue;
+    margin: auto;
+}
+
+
+/** Buttons **/
+
+.button-back-home {
+    display: block;
+    text-align: center;
+    margin: auto;
+    padding: 6px 12px 6px 12px;
+    border-radius: 15px;
+    border: none;
+    background-color: #FF7D00;
+    margin-top: 3rem;
+}
+
+.text-return-create {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.button-create {
+    display: block;
+    text-align: center;
+    margin: auto;
+    padding: 6px 12px 6px 12px;
+    border-radius: 15px;
+    border: none;
+    background-color: #006571;
+    color: aliceblue;  
+}
+
+
+
+/** EDIT EVENT **/
+
+/** Text **/
+
+.edit-title {
+    display: block;
+    margin: auto;
+    padding: 1rem;
+    margin-top:1rem ;
+    margin-bottom: -1rem;
+}
+.card-title {
+    text-align: center;
+    text-size-adjust: auto;
+    font-size: 1.4rem;
+}
+.form-label-edit {
+    display: block;
+    margin: auto;
+    color: aliceblue;
+}
+
+/** Layout **/
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.form-edit{
+    margin: auto;
+    padding: 2rem;
+    height: 90%;
+    width: 90%;
+    border-radius:15px ;
+    background-color: #ff7b00da ;
+}
+
+/** buttons **/ 
+
+.button-edit {
+    display: block;
+    text-align: center;
+    margin: auto;
+    padding: 6px 12px 6px 12px;
+    border-radius: 15px;
+    border: none;
+    background-color: #001524;
+    color: aliceblue;  
+}
