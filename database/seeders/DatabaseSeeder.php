@@ -28,10 +28,10 @@ class DatabaseSeeder extends Seeder
             'spaces' => '300', 'location' => 'España/Asturias',
         ]);
         Event::factory()->create([
-            'name' => 'Pal Mundo', 'description' => 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.',
-            'image' => 'https://partyflock.nl/images/party/262189_1200x1693_336204/Festival-Pal-Mundo.webp',
-            'spaces' => '80', 'location' => 'Holanda/Den Haag, 2533',
-
+            'name' => 'Monolink', 'description' => 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.',
+            'image' => 'https://pbs.twimg.com/media/FNlqB2aVkAI_og9?format=jpg&name=large',
+            'spaces' => '80', 'location' => 'Mallorca',
+            
         ]);
         Event::factory()->create([
             'name' => 'Primavera', 'description' => 'dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem ',
@@ -47,9 +47,9 @@ class DatabaseSeeder extends Seeder
         ]);
         Event::factory()->create([
             'name' => 'Minimal-Tech', 'description' => 'Lorem ipsum dolor sit amet consectetur adipiscing elit cras, per tristique conubia leo iaculis',
-            'image' => 'https://allmusicspain.com/wp-content/uploads/2021/12/WhatsApp-Image-2021-12-07-at-18.37.18.jpeg',
+            'image' => 'https://static.roland.com/assets/images/products/gallery/rc_sdz075_minimal_techno_gal.jpg',
             'spaces' => '90', 'location' => 'Madrid/España',
-
+            
         ]);
         Event::factory()->create([
             'name' => 'Cercle', 'description' => 'Leo rhoncus pulvinar nisl senectus metus sociis libero dui, phasellus condimentum placerat tincidunt lacinia dapibus vestibulum torquent ut, lectus sociosqu',
@@ -73,8 +73,22 @@ class DatabaseSeeder extends Seeder
             'name' => 'Tomorrow Land', 'description' => 'aqui se dejara una breve descripcion del evento',
             'image' => 'https://i.pinimg.com/originals/56/fb/30/56fb306e2b834858c432604cbb2324fd.jpg',
             'spaces' => '999', 'location' => 'Belgica',
-
+            
         ]);
+        Event::factory()->create([
+            'name' => 'AmsterdamLights', 'description' => 'aqui se dejara una breve descripcion del evento',
+            'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG7XzHTB3gCplUxNxrrh83IcDjwEBdyMVlyQ&usqp=CAU',
+            'spaces' => '999', 'location' => 'Holanda',
+            
+        ]);
+         
+         
+
+
+        //Event::factory(20)->create();
+        //    User::factory()->create(['name' => 'Administardor', 'email' => 'Admin@admin.com'], );
+        //    User::factory()->create(['name' => 'User1', 'email' => 'User1@user1.com'],);
+
         User::factory()->create(['name' => 'admin', 'email' => 'admin@admin.com', 'isAdmin' => true]);
         User::factory()->create(['name' => 'user1', 'email' => 'user1@user1.com', 'isAdmin' => false]);
 
