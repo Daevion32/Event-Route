@@ -16,7 +16,7 @@
 .container_spaces {
     display: flex;
     justify-content: flex-end;
-    gap: 5vh;
+    gap: 3vh;
     
 
 }
