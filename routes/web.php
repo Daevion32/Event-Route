@@ -41,7 +41,7 @@ Route::get('/show/{id}',[EventController::class, 'show'])->name('showEvent');
 //UPDATE
 
 Route::get('/edit/{id}', [EventController::class, 'edit'])->name('editEvent')->middleware('isadmin', 'auth');
-ROute::patch('/event/{id}', [EventController::class, 'update'])->name('updateEvent');
+Route::patch('/event/{id}', [EventController::class, 'update'])->name('updateEvent');
 
 //Inscribirse - Desinscribirse
 
