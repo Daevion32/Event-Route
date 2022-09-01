@@ -41,5 +41,16 @@ Route::get('/show/{id}',[EventController::class, 'show'])->name('showEvent');
 //UPDATE
 
 Route::get('/edit/{id}', [EventController::class, 'edit'])->name('editEvent')->middleware('isadmin', 'auth');
-ROute::patch('/event/{id}', [EventController::class, 'update'])->name('updateEvent');
+Route::patch('/event/{id}', [EventController::class, 'update'])->name('updateEvent');
 
+//Inscribirse/desinscribirse
+
+Route::get('/inscribe/{id}', [EventController::class, 'inscribe'])->middleware('auth')->name('inscribe');
+Route::get('/cancelInscription/{id}', [EventController::class, 'cancelInscription'])->middleware('auth')->name('cancelInscription');
+
+//Vista de eventos registrados
+
+Route::get('/eventRegister', [EventController::class, 'eventRegister'])->middleware('auth')->name('eventRegister');
+
+Route::get('/sliders', [EventController::class, 'slider'])->name('sliders');
+Route::post('sliders', [EventController::class, 'store']);
