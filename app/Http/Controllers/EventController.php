@@ -114,5 +114,10 @@ class EventController extends Controller
         Event::destroy($id);
         return redirect()->route('home');
     
-    } 
+    }
+    
+    public function slider(){
+        $event = Event::limit(5)->get();
+        return view('home',compact('events'));
+     }
 }
