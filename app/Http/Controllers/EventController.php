@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use  App\Models\Event;
 use Illuminate\Http\Request;
 
+
 class EventController extends Controller
 {
     /**
@@ -19,8 +20,9 @@ class EventController extends Controller
 
         //var_dump($events);
 
+        
+        
         return view('home', compact('events'));
-
     }
 
     /**
@@ -117,7 +119,8 @@ class EventController extends Controller
     }
     
     public function slider(){
-        $event = Event::limit(5)->get();
-        return view('home',compact('events'));
+        $carrusel = Event::orderBy('orden','asc')->get();
+
+         return view('home', compact('carousel'));
      }
 }

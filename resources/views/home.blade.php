@@ -2,21 +2,24 @@
 
 @section('content')
 
-<div class="p-3 m-0 border-0 bd-example">
+<div class="container-fluid">
     <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            @forelse ($carrusel as $item )
+            <li data-target="#carouselExampleDark" data-slide-to="{{$item->id}}" class="active"  aria-label="Slide 1"></li>
+            @empty
+            @endforelse 
         </div>
         <div class="carousel-inner">
+        @forelse ($carrusel as $item )
             <div class="carousel-item active" data-bs-interval="10000">
                 <img width="800" height="400" src="https://static.lasuperagenda.com/media/202208/coldplay-barcelona-2023-360x240.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
+                <h5>{{$item->name}}</h5>
                 </div>
             </div>
+            @empty
+            @endforelse
             <div class="carousel-item" data-bs-interval="2000">
                 <img src="..." class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">

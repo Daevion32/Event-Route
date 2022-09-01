@@ -43,6 +43,3 @@ Route::get('/edit/{id}', [EventController::class, 'edit'])->name('editEvent');
 ROute::patch('/event/{id}', [EventController::class, 'update'])->name('updateEvent');
 
 
-//SLIDER
-
-Route::get('sliders', [SliderController::class,'index'])->name('sliders');
