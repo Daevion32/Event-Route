@@ -9,14 +9,11 @@ img {
 @media (min-width: 820px) {
     .container_cards {
         display: flex;
-
-        flex-direction: column-reverse;
-        align-items: center;
+        gap:3vh;
+        justify-content: center;
         flex-wrap: wrap;
         background-color: lightgray;
-        /* background-image: url(https://img.freepik.com/vector-gratis/fondo-marmol-liquido-realista-oro_23-2148897013.jpg?w=2000); */
-
-    }
+    
 }
 
 .container_image {
