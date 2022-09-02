@@ -66,3 +66,5 @@ class Kernel extends HttpKernel
         'isadmin'=>\App\Http\Middleware\IsAdmin::class,
     ];
 }
+
+

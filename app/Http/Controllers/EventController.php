@@ -149,9 +149,6 @@ class EventController extends Controller
     }
 
 
-    /* public function slider(){
-        $event = Event::limit(5)->get();
-        return redirect()->route('login');
-    } */
+
 }
 
