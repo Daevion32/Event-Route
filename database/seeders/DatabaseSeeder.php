@@ -93,11 +93,11 @@ class DatabaseSeeder extends Seeder
         User::factory()->create(['name' => 'user1', 'email' => 'user1@user1.com', 'isAdmin' => false]);
 
         Event::factory()
-                ->has(User::factory()->count(20))
+                ->has(User::factory()->count(5))
                 ->create();
 
         User::factory()
-                ->has(Event::factory()->count(20))  
+                ->has(Event::factory()->count(5))  
                 ->create(); 
     }           
 }

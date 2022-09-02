@@ -1,27 +1,11 @@
-.container_show {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.card_form{
-    /* background-color: #006571; */
-    height: 40vh;
-    width: 100vh;
+/** HOME**/
+/*Card Home*/
 
+img {
+    margin-top: 2vh;
 
 }
-.form_all{
-    background-color: #FFECD1;
-}
-.title_edit{
-    display: flex;
-    justify-content:center;
-}
 
-.card_show {
-    height: 40vh;
-    width: 40vh;
-}
 @media (min-width: 820px) {
     .container_cards {
         display: flex;
@@ -33,38 +17,6 @@
         /* background-image: url(https://img.freepik.com/vector-gratis/fondo-marmol-liquido-realista-oro_23-2148897013.jpg?w=2000); */
 
     }
-}
-
-.img_cardShow {
-    margin: auto;
-}
-
-
-.buttons_cardShow {
-    display: flex;
-    justify-content: flex-end;
-    gap: 6vh;
-}
-
-
-.form-group {
-    display: flex;
-    background-color: #006571;
-}
-
-.container_spaces {
-    display: flex;
-    justify-content: flex-end;
-     gap: 3vh;
-
-}
-
-.card_textshow {
-    background-color: #FFECD1;
-}
-
-.btn_home {
-    margin-top: 2vh;
 }
 
 .container_image {
@@ -80,6 +32,30 @@
 
 }
 
+.container_spaces {
+    display: flex;
+    justify-content:center ;
+     gap: 1vh;
+
+}
+
+.container_date {
+    display: flex;
+
+}
+
+.container_show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_ubication {
+    display: flex;
+}
+
+/*Icons */
+
 .icon_title {
     gap: 5px;
     display: flex;
@@ -92,9 +68,14 @@
     background-color: white;
 }
 
-.container_date {
-    display: flex;
+.icon_add {
+    margin-right: 3vh;
+}
 
+/*Buttons*/
+
+.btn_home {
+    margin-top: 2vh;
 }
 
 .button_space {
@@ -104,27 +85,41 @@
     margin-bottom: 2vh;
 }
 
-.icon_add {
-    margin-right: 3vh;
-}
-
-
-.button_add {
+/* .button_add {
     background-color: orange;
     border-radius: 20px;
     font-size: 2vh;
     margin-bottom: 2vh;
-}
+} */
 
-.container_ubication {
+/**    SHOW EVENT**/
+
+/*Card ShowEvent*/
+
+.container_show{
+margin-top: 15vh;
+}
+.container_spaces{
     display: flex;
 }
 
-img {
-    margin-top: 2vh;
-
+.card_show {
+    height: 40vh;
+    width: 40vh;
 }
 
+.img_cardShow {
+    margin: auto;
+}
+.buttons_cardShow {
+    display: flex;
+    justify-content:space-evenly;
+    gap: 6vh;
+}
+.card_textshow {
+     background-color:black
+    
+}
 
 /** CREATE EVENT**/
 
