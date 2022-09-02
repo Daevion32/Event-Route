@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use  App\Models\Event;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 class EventController extends Controller
@@ -116,7 +117,7 @@ class EventController extends Controller
         return redirect()->route('home');
     
     }
-
+    
     public function inscribe($id)
     {
 
@@ -139,23 +140,15 @@ class EventController extends Controller
 
         return  redirect()->route('home');
     }
-    
-    public function slider(){
-        $event = Event::limit(5)->get();
-        return view('home',compact('events'));
-     }
 
-
-
-
-
-
-
-    public function eventRegistrer()
+    public function eventRegister()
     {
-
         $user = User::find(Auth::id());
         $event_user = ($user->event);
-        return view('eventRegistrer', compact('event_user'));
+        return view('eventRegister', compact('event_user'));
     }
+
+
+
 }
+
