@@ -118,9 +118,9 @@ class EventController extends Controller
     
     }
     
-    public function slider(){
-        $carrusel = Event::orderBy('orden','asc')->get();
+    public function slider($id){
+        $event = Event::orderBy('id','asc')->get();
 
-         return view('home', compact('carousel'));
+         return view('home', compact('event'));
      }
 }
