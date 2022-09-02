@@ -2,29 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use  App\Models\Event;
-use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
+use App\Http\Controllers\Controller;
+use App\Models\Carousel;
+use image;
 
-
-class EventController extends Controller
+class CarouselController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    //
     public function index()
     {
-        //
-        $events = Event::get();
+        $carousels = Carousel::all();
 
-        //var_dump($events);
-
-        
-        
-        return view('home', compact('events'));
+        return view('home', compact('carousels'));
     }
 
     /**
@@ -48,7 +39,7 @@ class EventController extends Controller
     {
         //
 
-        $event = request()->except('_token');
+        $carousels = request()->except('_token');
 
         // $event = Event::create(
         //     [
@@ -58,12 +49,12 @@ class EventController extends Controller
         //         'spaces' => $request->spaces,
         //         'location' =>  $request->location,
         //         'date' => $request->date,
-
+                
         //     ]
         // );
-        Event::create($event);
+        Carousel::create($carousels);
 
-
+        
         return redirect()->route('home');
     }
 
@@ -76,9 +67,9 @@ class EventController extends Controller
     public function show($id)
     {
         //
-            $event = Event::find($id);
-            return view ('showEvent', compact('event',));
-     
+        $carousels = Carousel::find($id);
+
+        return view ('showEvent', compact('carousels'));
     }
 
     /**
@@ -89,8 +80,8 @@ class EventController extends Controller
      */
     public function edit($id)
     {
-        $event = Event::find($id);
-        return view('editEvent', compact('event'));
+        $carousels = Carousel::find($id);
+        return view ('editEvent', compact('carousels'));
     }
 
     /**
@@ -102,9 +93,9 @@ class EventController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $event = request()->except(['_token', '_method']);
-        Event::where('id', '=', $id)->update($event);
-        return redirect()->route('home');
+        $carousels = request()->except(['_token', '_method']);
+        Carousel::where('id', '=', $id)->update($carousels);
+        return redirect()->route('home');  
     }
 
     /**
@@ -115,51 +106,10 @@ class EventController extends Controller
      */
     public function destroy($id)
     {
-        Event::destroy($id);
+        Carousel::destroy($id);
         return redirect()->route('home');
     
-    }
+    }  
 
-    public function inscribe($id)
-    {
-
-        $user = User::find(Auth::id());
-        $event = Event::find($id);
-
-        $user->event()->attach($event);
-
-        return redirect()->route('home');
-    }
-
-    public function cancelInscription($id)
-    {
-
-
-        $user = User::find(Auth::id());
-        $event = Event::find($id);
-
-        $user->event()->detach($event);
-
-        return  redirect()->route('home');
-    }
-    
-    public function slider($id){
-        $event = Event::orderBy('id','asc')->get();
-
-         return view('home', compact('event'));
-     }
-
-
-
-
-
-
-
-    public function eventRegistrer()
-    {
-
-        $user = User::find(Auth::id());
-        $event_user = ($user->event);
-        return view('eventRegistrer', compact('event_user'));
-    }
 }
+

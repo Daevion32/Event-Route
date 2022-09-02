@@ -2,38 +2,23 @@
 
 @section('content')
 
-
-<div class="p-3 m-0 border-0 bd-example ">
-
-
-    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
+<div class="container-fluid p-0 m-0 border-0">
+    <div id="carouselDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+            @foreach ($events as $event)
+            <li data-bs-target="#carouselExampleDark" data-bs-slide="{{$event->id}}" class="@if($loop->index==0) active @endif">  aria-label="Slide 1"></li>
+            @endforeach
+        </ol>
         <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="10000">
-                <img width="800" height="400" src="https://static.lasuperagenda.com/media/202208/coldplay-barcelona-2023-360x240.jpg" class="d-block w-100" alt="...">
+            @foreach ($events as $event)
+            <div class="carousel-item @if($loop->index==0) active @endif"" data-bs-interval="1000">
+                <img width="800" height="400" src="{{ $event->image}}" class="d-block w-100" alt="Image Event">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
+                    <h5 class="title-slider">{{ $event->name}}</h5>
+                    <a href="{{$event->link}}" class="btn btn-danger">Ver Más</a>
                 </div>
             </div>
-            <div class="carousel-item" data-bs-interval="2000">
-                <img src="..." class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Some representative placeholder content for the second slide.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
-                </div>
-            </div>
+            @endforeach
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
