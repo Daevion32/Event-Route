@@ -46,7 +46,7 @@ Route::patch('/event/{id}', [EventController::class, 'update'])->name('updateEve
 
 //SLIDER
 
-Route::get('sliders', [SliderController::class,'index'])->name('sliders');
+// Route::get('sliders', [SliderController::class,'index'])->name('sliders');
 
 //Inscribirse - Desinscribirse
 
