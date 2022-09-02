@@ -3,7 +3,6 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use League\CommonMark\Extension\Table\Table;
 
 return new class extends Migration
 {
@@ -14,15 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('event_route', function (Blueprint $table) {
+        Schema::create('events', function (Blueprint $table) {
             $table->id();
-
-            $table->string('name',150);
-            $table->string('description',250);
-            $table->string('img');
-            $table->integer('spaces');
-            $table->string('ubication');
             
+            $table->string("name",150);
+            $table->string("description",250);
+            $table->string("image");
+            $table->integer("spaces");
+            $table->string("location",250);
+            $table->string("date");
+            $table->string("musical_genre",250);
+
             $table->timestamps();
         });
     }
@@ -34,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('event_route');
+        Schema::dropIfExists('events');
     }
 };
