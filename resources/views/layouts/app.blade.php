@@ -101,7 +101,7 @@
                             </div>
                         </li>
                         @endguest
-                        @if (Auth::check() && Auth::user()->isAdmin))
+                        @if (Auth::check() && Auth::user()->isAdmin)
                         <li>
                             <a style="display: flex; flex-direction: column" href="{{route('eventRegister')}}">
                             <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
