@@ -147,7 +147,5 @@ class EventController extends Controller
         return view('eventRegister', compact('event_user'));
     }
 
-
-
 }
 
