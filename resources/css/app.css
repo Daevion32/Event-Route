@@ -5,7 +5,14 @@ img {
     margin-top: 2vh;
 
 }
+.newEvent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+
+
+}
 @media (min-width: 820px) {
     .container_cards {
         display: flex;
@@ -32,7 +39,7 @@ img {
 .container_spaces {
     display: flex;
     justify-content:center ;
-     gap: 1vh;
+    gap: 1vh;
 
 }
 
