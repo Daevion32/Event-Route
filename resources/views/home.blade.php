@@ -66,9 +66,7 @@
                                         </a>
                                     </form>
                         @endif
-
                         </div>
-
                     </div>
                 
                     <div class="space-x-2 flex text-sm container_date">
@@ -119,5 +117,8 @@
     @endif
 
 @endsection
+
+
+
 
 
