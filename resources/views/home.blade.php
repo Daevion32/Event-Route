@@ -5,7 +5,6 @@
 
 
     <div class="p-3 m-0 border-0 bd-example">   
-
     
         <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
