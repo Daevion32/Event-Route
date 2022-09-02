@@ -113,7 +113,7 @@
                     <button method="post"  onclick="return confirm ('Acabas de inscribirte de el evento {{$event->name}}')" class="btn btn-warning button_add" type="submit">
                         <a href="{{ route('inscribe', $event->id)}}">Check Inn</a>
                     </button>
-
+                        
                     <button method="post"  onclick="return confirm ('Acabas de desinscribirte de el evento {{$event->name}}')" class="btn btn-warning button_add" type="submit">
                         <a href="{{ route('cancelInscription', $event->id)}}">Check Out</a>
                     </button>
