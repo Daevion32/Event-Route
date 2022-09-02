@@ -88,8 +88,8 @@ class CrudTest extends TestCase
         $event = Event::factory()->create();
         $response = $this->get(route('showEvent', $event->id));
         $response->assertStatus(200)
-                    ->assertView('showEvent'); 
-                    $response->assertSee('name');
+                    ->assertViewIs('showEvent'); 
+        $response->assertSee('show');
     }
         
 
