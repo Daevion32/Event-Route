@@ -77,7 +77,7 @@
                                 <path d="M14.2354 11.5882V14.2353C14.2354 14.7033 14.0495 15.1522 13.7185 15.4831C13.3876 15.8141 12.9387 16 12.4707 16H2.76472C2.29669 16 1.84783 15.8141 1.51688 15.4831C1.18593 15.1522 1 14.7033 1 14.2353V4.52931C1 4.06128 1.18593 3.61241 1.51688 3.28146C1.84783 2.95051 2.29669 2.76459 2.76472 2.76459H5.41181" stroke="#78290F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </a>
-                    </div>
+                   
                     <form action="{{ route('delete',['id'=> $event->id])}}" method="post">
                         @method('delete')
                         @csrf
@@ -88,7 +88,9 @@
                         </a>
 
                     </form>
+                    </div>
                     @endif
+                    
                 </div>
 
                 <div class="space-x-2 flex text-sm container_date">
