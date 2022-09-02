@@ -83,13 +83,13 @@ class CrudTest extends TestCase
 
     }
 
-    // public function test_a_event_appear_in_show(){
-    //     $this->withExceptionHandling();
-    //     $event = Event::factory(1)->create();
-    //     $response = $this->get(route('/home', $event->id));
-    //     $response->assertOk();
-    //     $event = Event::first();
-    //     $response->assertViewIs('showEvent'); 
-    // }    
+    public function test_a_event_appear_in_show(){
+        $this->withExceptionHandling();
+        $event = Event::factory()->create();
+        $response = $this->get(route('showEvent', $event->id));
+        $response->assertStatus(200)
+                 ->assertViewIs('showEvent'); 
+        $response->assertSee('name');
+    }    
 
 }
