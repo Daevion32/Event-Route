@@ -43,16 +43,7 @@ Route::get('/show/{id}',[EventController::class, 'show'])->name('showEvent');
 Route::get('/edit/{id}', [EventController::class, 'edit'])->name('editEvent')->middleware('isadmin', 'auth');
 Route::patch('/event/{id}', [EventController::class, 'update'])->name('updateEvent');
 
-<<<<<<< HEAD
 //Inscribirse/desinscribirse
-=======
-
-//SLIDER
-
-// Route::get('sliders', [SliderController::class,'index'])->name('sliders');
-
-//Inscribirse - Desinscribirse
->>>>>>> 457a2c2db105a7f9b1d2999fc5583097ccca1365
 
 Route::get('/inscribe/{id}', [EventController::class, 'inscribe'])->middleware('auth')->name('inscribe');
 Route::get('/cancelInscription/{id}', [EventController::class, 'cancelInscription'])->middleware('auth')->name('cancelInscription');
