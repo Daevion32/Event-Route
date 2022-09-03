@@ -1,29 +1,120 @@
+/** HOME**/
+/*Card Home*/
 
-  .container_show {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      
-      
-  }
-  .card_show{
+img {
+    margin-top: 2vh;
+
+}
+.newEvent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
+@media (min-width: 820px) {
+    .container_cards {
+        display: flex;
+        gap:3vh;
+        justify-content: center;
+        flex-wrap: wrap;
+        background-color: lightgray;
+    
+}
+
+.container_image {
+    margin-top: 10px;
+}
+
+.container_title {
+    padding: 30px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10vh;
+
+
+}
+
+.container_spaces {
+    display: flex;
+    justify-content:center ;
+    gap: 1vh;
+
+}
+
+.container_date {
+    display: flex;
+
+}
+
+.container_show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_ubication {
+    display: flex;
+}
+
+/*Icons */
+
+.icon_title {
+    gap: 5px;
+    display: flex;
+    padding: 5px;
+    align-content: center;
+    justify-content: center;
+    border-radius: 15px;
+    width: 5rem;
+    height: 2rem;
+    background-color: white;
+}
+
+.icon_add {
+    margin-right: 3vh;
+}
+
+/*Buttons*/
+
+.btn_home {
+    margin-top: 2vh;
+}
+
+.button_space {
+    border-radius: 20px;
+    background-color: #006571;
+    font-size: 2vh;
+    margin-bottom: 2vh;
+}
+
+/* .button_add {
+    background-color: orange;
+    border-radius: 20px;
+    font-size: 2vh;
+    margin-bottom: 2vh;
+} */
+
+/**    SHOW EVENT**/
+
+/*Card ShowEvent*/
+
+.container_show{
+margin-top: 15vh;
+}
+.container_spaces{
+    display: flex;
+}
+
+.card_show {
     height: 40vh;
     width: 40vh;
-  }
-  @media (min-width: 820px){
-    .hola {
-        display: flex;
-        
-        flex-direction: column-reverse;
-        align-items: center;
-        flex-wrap: wrap; 
-        background-color:lightgray; 
-        /* background-image: url(https://img.freepik.com/vector-gratis/fondo-marmol-liquido-realista-oro_23-2148897013.jpg?w=2000); */
-   
-   } 
-  }
-  .img_cardShow{
+}
+
+.img_cardShow {
     margin: auto;
+<<<<<<< HEAD
   }
   
 
@@ -32,79 +123,168 @@
     
     
  }
+=======
+}
+.buttons_cardShow {
+    display: flex;
+    justify-content:space-evenly;
+    gap: 6vh;
+}
+.card_textshow {
+     background-color:black
+    
+}
+
+/** CREATE EVENT**/
+
+/**text**/
+
+.subtitle-create {
+    display: inherit;
+    margin: 0 auto;
+    padding: 1rem;
+    margin-top:1rem ;
+    margin-bottom: -1rem;
+}
+
+.text-subtitle {
+    text-align: center;
+    text-size-adjust: auto;
+    font-size: 1.4rem;
+}
+
+.form-label {
+    display: block;
+    color: aliceblue;
+    margin: auto;
+}
+>>>>>>> origin/test-develop
 
 
-  .form-group {
-      display: flex;
-      background-color: #006571;
-  }
+/** Buttons **/
 
-  .container_spaces {
-      display: flex;
-      justify-content: flex-end;
-      gap: 5vh;
+/** CREATE EVENT**/
 
+/**text**/
 
-  }
-  .card_textshow{
-    background-color: #FFECD1;
-  }
-  .btn_home{
-    margin-top: 2vh;
-  }
+.subtitle-create {
+    display: inherit;
+    margin: 0 auto;
+    padding: 1rem;
+    margin-top:1rem ;
+    margin-bottom: -1rem;
+}
 
-  .container_image {
-      margin-top: 10px;
-  }
+.text-subtitle {
+    text-align: center;
+    text-size-adjust: auto;
+    font-size: 1.4rem;
+}
 
-  .container_title {
-      padding: 30px;
-      display: flex;
-      justify-content: flex-start;
-      
+.legend {
+    color: aliceblue;
+    text-align: center;
+}
 
-  }
-
-  .icon_title {
-      gap: 5px;
-      display: flex;
-      padding: 5px;
-      align-content: center;
-      justify-content: center;
-      border-radius: 15px;
-      width: 5rem;
-      height: 2rem;
-      background-color: white;
-  }
-
-  .container_date {
-      display: flex;
-
-  }
-
-  .button_space {
-      border-radius: 20px;
-      background-color: #006571;
-      font-size: 2vh;
-      margin-bottom: 2vh;
-  }
-
-  .icon_add {
-      margin-right: 3vh;
-  }
+/** Layout **/
+.grid-temaplete {
+    padding: 1.5rem;
+}
 
 
-  .button_add {
-      background-color: orange;
-      border-radius: 20px;
-      font-size: 2vh;
-      margin-bottom: 2vh;
-  }
+.div-form {
+    background-color: #001326d0;
+    margin: auto;
+    padding: 2rem;
+    height: 90%;
+    width: 90%;
+    border-radius:15px ;
+}
 
-  .container_ubication {
-      display: flex;
-  }
+.form-label {
+    display: block;
+    color: aliceblue;
+    margin: auto;
+}
 
-  img {
-      margin-top: 2vh;
-  }
+
+/** Buttons **/
+
+.button-back-home {
+    display: block;
+    text-align: center;
+    margin: auto;
+    padding: 6px 12px 6px 12px;
+    border-radius: 15px;
+    border: none;
+    background-color: #FF7D00;
+    margin-top: 3rem;
+}
+
+.text-return-create {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.button-create {
+    display: block;
+    text-align: center;
+    margin: auto;
+    padding: 6px 12px 6px 12px;
+    border-radius: 15px;
+    border: none;
+    background-color: #006571;
+    color: aliceblue;  
+}
+
+
+
+/** EDIT EVENT **/
+
+/** Text **/
+
+.edit-title {
+    display: block;
+    margin: auto;
+    padding: 1rem;
+    margin-top:1rem ;
+    margin-bottom: -1rem;
+}
+.card-title {
+    text-align: center;
+    text-size-adjust: auto;
+    font-size: 1.4rem;
+}
+.form-label-edit {
+    display: block;
+    margin: auto;
+    color: aliceblue;
+}
+
+/** Layout **/
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.form-edit{
+    margin: auto;
+    padding: 2rem;
+    height: 90%;
+    width: 90%;
+    border-radius:15px ;
+    background-color: #ff7b00da ;
+}
+
+/** buttons **/ 
+
+.button-edit {
+    display: block;
+    text-align: center;
+    margin: auto;
+    padding: 6px 12px 6px 12px;
+    border-radius: 15px;
+    border: none;
+    background-color: #001524;
+    color: aliceblue;  
+}

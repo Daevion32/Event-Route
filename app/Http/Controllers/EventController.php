@@ -17,12 +17,11 @@ class EventController extends Controller
     public function index()
     {
         //
-        $events = Event::get();
+        $events = Event::paginate(3);
 
-        //var_dump($events);
+    
 
         return view('home', compact('events'));
-
     }
 
     /**
@@ -56,12 +55,12 @@ class EventController extends Controller
         //         'spaces' => $request->spaces,
         //         'location' =>  $request->location,
         //         'date' => $request->date,
-                
+
         //     ]
         // );
         Event::create($event);
 
-        
+
         return redirect()->route('home');
     }
 
@@ -88,7 +87,7 @@ class EventController extends Controller
     public function edit($id)
     {
         $event = Event::find($id);
-        return view ('editEvent', compact('event'));
+        return view('editEvent', compact('event'));
     }
 
     /**
@@ -102,7 +101,7 @@ class EventController extends Controller
     {
         $event = request()->except(['_token', '_method']);
         Event::where('id', '=', $id)->update($event);
-        return redirect()->route('home');  
+        return redirect()->route('home');
     }
 
     /**
@@ -116,9 +115,10 @@ class EventController extends Controller
         Event::destroy($id);
         return redirect()->route('home');
     
-    } 
-
-    public function inscribe($id){
+    }
+    
+    public function inscribe($id)
+    {
 
         $user = User::find(Auth::id());
         $event = Event::find($id);
@@ -128,9 +128,10 @@ class EventController extends Controller
         return redirect()->route('home');
     }
 
-    public function cancelInscription($id){
+    public function cancelInscription($id)
+    {
 
-        
+
         $user = User::find(Auth::id());
         $event = Event::find($id);
 
@@ -138,4 +139,13 @@ class EventController extends Controller
 
         return  redirect()->route('home');
     }
+
+    public function eventRegister()
+    {
+        $user = User::find(Auth::id());
+        $event_user = ($user->event);
+        return view('eventRegister', compact('event_user'));
+    }
+
 }
+
