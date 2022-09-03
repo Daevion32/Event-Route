@@ -6,7 +6,7 @@
     <div id="carouselDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
         <ol class="carousel-indicators">
             @foreach ($events as $event)
-            <li data-bs-target="#carouselExampleDark" data-bs-slide="{{$event->id}}" class="@if($loop->index==0) active @endif">  aria-label="Slide 1"></li>
+            <li data-bs-target="#carouselExampleDark" data-bs-slide="{{$event->id}}" class="@if($loop->index==0) active @endif"  aria-label="Slide 1"></li>
             @endforeach
         </ol>
         <div class="carousel-inner">
@@ -100,3 +100,6 @@
 </a>
 
 @endsection
+
+<!-- buscar datenow
+ filter php if verificar si es menor o mayor --> 

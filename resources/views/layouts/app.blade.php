@@ -17,6 +17,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <!--    <link href="/resources/css/app.css" rel="stylesheet"> -->
     <!-- Scripts -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     @vite(['resources/sass/app.scss', 'resources/js/app.js','resources/css/app.css'])
 </head>
 
@@ -76,7 +79,7 @@
                             </a>
                         </li>
                         @endif
-                        
+
                         @if (Route::has('createEvent'))
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('createEvent') }}">
@@ -111,7 +114,7 @@
         </nav>
         <main class="">
             @yield('content')
-           
+
         </main>
     </div>
     @stack('scripts')
