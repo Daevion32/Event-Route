@@ -52,7 +52,7 @@
                         <!-- Authentication Links -->
                         @guest
                         @if (Route::has('login'))
-                        <li class="nav-item">
+                        <li class="nav-item dropdown">
                             <a class="nav-link" style="display: flex; flex-direction: column; color: white; align-items: center" href="{{ route('login') }}">
                                 <!-- {{ __('Login') }} -->
                                 <svg width="40" height="40" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -75,15 +75,15 @@
                         </li>
                         @endif
                         
-<!--                         @if (Route::has('createEvent'))      
-                                <li class="nav-item">
+                        @if (Auth::check() && Auth::user()->isAdmin)                                
+                        <li class="nav-item">
                                     <a class="nav-link" href="{{ route('createEvent') }}">
                                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M15 25V15M15 15V5M15 15H25M15 15H5" stroke="white" stroke-width="5.83333" stroke-linecap="round" />
                                         </svg>
                                     </a>
                                 </li>
-                        @endif -->
+                        @endif
                         @else
                         <li class="nav-item dropdown">
                             <a style="color: white;" id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
