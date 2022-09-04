@@ -17,7 +17,7 @@ class EventController extends Controller
     public function index()
     {
         //
-        $events = Event::paginate(3);
+        $events = Event::paginate(8);
 
     
 
