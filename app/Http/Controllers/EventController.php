@@ -18,12 +18,11 @@ class EventController extends Controller
     public function index()
     {
         //
-        $events = Event::get();
+        /* $events = Event::get(); */
+
+        $events = Event::whereDate('date', '>=', now()->subDays(30))->get();
 
         //var_dump($events);
-
-        
-        
         return view('home', compact('events'));
     }
 
@@ -143,10 +142,11 @@ class EventController extends Controller
         return  redirect()->route('home');
     }
     
-    public function slider($id){
-        $event = Event::orderBy('id','asc')->get();
+    public function slider(){
+        $event = Event::orderBy('id', 'asc')->get(2);
+        
 
-         return view('home', compact('event'));
+        return view('home', compact('events'));
      }
 
 

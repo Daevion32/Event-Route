@@ -2,11 +2,11 @@
 
 @section('content')
 
-<div class="container-fluid p-0 m-0 border-0">
+<div class="container-fluid p-0 m-0 border-0" >
     <div id="carouselDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
         <ol class="carousel-indicators">
             @foreach ($events as $event)
-            <li data-bs-target="#carouselExampleDark" data-bs-slide="{{$event->id}}" class="@if($loop->index==0) active @endif">  aria-label="Slide 1"></li>
+            <li data-bs-target="#carouselExampleDark" data-bs-slide="{{$event->id}}" class="@if($loop->index==0) active @endif"></li>
             @endforeach
         </ol>
         <div class="carousel-inner">
@@ -15,7 +15,7 @@
                 <img width="800" height="400" src="{{ $event->image}}" class="d-block w-100" alt="Image Event">
                 <div class="carousel-caption d-none d-md-block">
                     <h5 class="title-slider">{{ $event->name}}</h5>
-                    <a href="{{$event->link}}" class="btn btn-danger">Ver Más</a>
+                    <a href="" class="btn btn-danger">Ver Más</a>
                 </div>
             </div>
             @endforeach
@@ -35,6 +35,7 @@
 
 <div class="container_cards">
     @foreach ($events as $event)
+    @if ($event->date > 0)
     <div class="card text-bg-dark mb-3 card_all" style="max-width: 540px;">
         <div class="row g-0">
             <div class="col-md-4 container_image">
@@ -116,6 +117,7 @@
             </div>
         </div>
     </div>
+    @endif
     @endforeach
 </div>
 @if(Auth::check() && Auth::user()->isAdmin)
@@ -127,3 +129,6 @@
 @endif
 
 @endsection
+
+<!-- buscar datenow
+ filter php if verificar si es menor o mayor --> 
