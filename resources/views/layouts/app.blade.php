@@ -51,39 +51,18 @@
                     <ul style="display: flex; align-items: center" class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
                         @guest
-                        @if (Route::has('login'))
                         <li class="nav-item dropdown">
-                            <a class="nav-link" style="display: flex; flex-direction: column; color: white; align-items: center" href="{{ route('login') }}">
-                                <!-- {{ __('Login') }} -->
-                                <svg width="40" height="40" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <a style="color: white;" id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre><svg width="40" height="40" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M9.375 8.125C9.375 11.2262 11.8988 13.75 15 13.75C18.1012 13.75 20.625 11.2262 20.625 8.125C20.625 5.02375 18.1012 2.5 15 2.5C11.8988 2.5 9.375 5.02375 9.375 8.125ZM25 26.25H26.25V25C26.25 20.1763 22.3237 16.25 17.5 16.25H12.5C7.675 16.25 3.75 20.1763 3.75 25V26.25H25Z" fill="white" />
-                                </svg>
-
-                            Inicia sesión</a>
+                                </svg></a>
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('login') }}">
+                                Inicia sesión</a>
+                                <a class="dropdown-item" href="{{ route('register') }}">
+                                Regístrate</a>
+                            </div>
                         </li>
-                        @endif
 
-                        @if (Route::has('register'))
-                        <li class="nav-item">
-                            <a class="nav-link" style="display: flex; flex-direction: column; color: white; align-items: center" href="{{ route('register') }}" style="text-decoration: none">
-                                <!-- {{ __('Register') }} -->
-                                <svg width="40" height="40" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.375 8.125C9.375 11.2262 11.8988 13.75 15 13.75C18.1012 13.75 20.625 11.2262 20.625 8.125C20.625 5.02375 18.1012 2.5 15 2.5C11.8988 2.5 9.375 5.02375 9.375 8.125ZM25 26.25H26.25V25C26.25 20.1763 22.3237 16.25 17.5 16.25H12.5C7.675 16.25 3.75 20.1763 3.75 25V26.25H25Z" fill="white" />
-                                </svg>
-                            Regístrate</a>   
-                            </a>
-                        </li>
-                        @endif
-                        
-                        @if (Auth::check() && Auth::user()->isAdmin)                                
-                        <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('createEvent') }}">
-                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M15 25V15M15 15V5M15 15H25M15 15H5" stroke="white" stroke-width="5.83333" stroke-linecap="round" />
-                                        </svg>
-                                    </a>
-                                </li>
-                        @endif
                         @else
                         <li class="nav-item dropdown">
                             <a style="color: white;" id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -101,7 +80,7 @@
                             </div>
                         </li>
                         @endguest
-                        @if (Auth::check() && Auth::user()->isAdmin)
+                        @if (Auth::check())
                         <li>
                             <a style="display: flex; flex-direction: column; color: white; align-items: center; text-decoration: none; margin-right: 0.5vw; margin-left: 0.5vw" href="{{route('eventRegister')}}">
                             <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
