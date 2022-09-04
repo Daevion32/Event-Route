@@ -117,10 +117,12 @@ class EventController extends Controller
     
     }
     
-    public function slider($id){
-        $event = Event::orderBy('id','asc')->get();
+    public function slider(){
+        $event = Event::orderBy('id', 'asc')->get(2);
         
 
-         return view('home', compact('event'));
+        return view('home', compact('events'));
      }
-}
+} 
+
+
