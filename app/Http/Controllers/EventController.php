@@ -79,6 +79,14 @@ class EventController extends Controller
         return view ('showEvent', compact('event'));
     }
 
+    public function pastEvents($id)
+    {
+        
+        $event = Event::where($id);
+
+        return view ('showEvent', compact('event'));
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

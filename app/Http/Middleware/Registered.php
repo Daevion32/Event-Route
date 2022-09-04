@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 
 
-class IsUser
+class Registered
 {
     /**
      * Handle an incoming request.
@@ -19,9 +19,10 @@ class IsUser
      */
     public function handle(Request $request, Closure $next)
     {
-        if (Auth::user()->isUser){
+        if (Auth::user()->registered){
             return $next($request);
         }
         return redirect()->route('/');
     }
 }
+

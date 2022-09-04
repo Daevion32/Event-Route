@@ -42,7 +42,7 @@ class DatabaseSeeder extends Seeder
         Event::factory()->create([
             'name' => 'Nirvana', 'description' => '“Nor is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but occasionally circumstance',
             'image' => 'https://teatromadrid.com/wp-content/uploads/2020/01/teatro-madrid-nirvana-unplegged-cartel.jpg',
-            'spaces' => '30', 'location' => 'Gent/Belgica',
+            'spaces' => '3', 'location' => 'Gent/Belgica',
 
         ]);
         Event::factory()->create([
@@ -77,5 +77,13 @@ class DatabaseSeeder extends Seeder
         ]);
         User::factory()->create(['name' => 'admin', 'email' => 'admin@admin.com', 'isAdmin' => true]);
         User::factory()->create(['name' => 'user1', 'email' => 'user1@user1.com', 'isUser' => true, 'isAdmin' => false]);
+    
+        Event::factory()
+                ->has(User::factory()->count(30))
+                ->create();
+
+        User::factory()
+                ->has(Event::factory()->count(30))
+                ->create();
     }
 }
