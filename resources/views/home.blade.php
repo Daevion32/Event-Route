@@ -114,7 +114,7 @@
 
                     <button class="h-10 px-6 font-semibold rounded-md bg-red text-white button_space" type="submit"> {{ $event-> spaces}} pax</button>
 
-
+                    @if(Auth::check())
                     <button method="post" onclick="return confirm ('Acabas de inscribirte de el evento {{$event->name}}')" class="btn btn-warning button_add" type="submit">
                         <a href="{{ route('inscribe', $event->id)}}">Check In</a>
                     </button>
@@ -122,6 +122,7 @@
                     <button method="post" onclick="return confirm ('Acabas de desinscribirte de el evento {{$event->name}}')" class="btn btn-warning button_add" type="submit">
                         <a href="{{ route('cancelInscription', $event->id)}}">Check Out</a>
                     </button>
+                    @endif
 
                     @if(Auth::check() && Auth::user()->isAdmin)
                     <a class="addButtonSlider">
