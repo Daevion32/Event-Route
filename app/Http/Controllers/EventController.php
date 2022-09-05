@@ -19,11 +19,13 @@ class EventController extends Controller
         //
         $events = Event::paginate(8);
 
-    
 
         return view('home', compact('events'));
     }
 
+    public function sendConfirmationEmail() {
+        
+    }
     /**
      * Show the form for creating a new resource.
      *
