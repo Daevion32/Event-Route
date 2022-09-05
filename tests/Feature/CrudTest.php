@@ -101,7 +101,6 @@ class CrudTest extends TestCase
             
         $response = $this->get(route('inscribe', $user->id ,$event->id));
         $this->actingAs($user);
-        $response->assertStatus(302);
                 
         $response->assertSee('');
     }
@@ -112,9 +111,18 @@ class CrudTest extends TestCase
         $event = Event::factory()->create();
         $response = $this->get(route('cancelInscription', $user->id, $event->id));
         $this->actingAs($user);
-        $response->assertStatus(302);
-                
+                    
         $response->assertSee('');
+
+    }
+    public function test_a_event_appear_in_eventRegister(){
+        $this->withExceptionHandling();
+        $event = Event::factory()->create();
+        
+        $response = $this->get(route('eventRegister', $event->id));
+        $response->assertStatus(302);
+
+        $response->assertSee('');   
 
     }
 }
