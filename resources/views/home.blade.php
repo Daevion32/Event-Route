@@ -15,7 +15,7 @@
             <div class="carousel-item @if($loop->index<=0) active @endif" data-bs-interval="3000">
                 <img width="800" height="400" src="{{ $event->image}}" class="d-block w-100" alt="Image Event">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5 class="title-slider">{{$event->name}}</h5>
+                    <h1 class="title-slider">{{$event->name}}</h1>
                     <a href="{{ route('showEvent',$event->id) }}" class="btn btn-danger">Ver Más</a>
                 </div>
             </div>
@@ -109,7 +109,7 @@
     @endforeach
 </div>
 <br>
-{{ $events->links() }}
+{{ $eventsFut->links() }}
 <div class="text-bg-light p-3 container_cards">
     <h2 class="p-2 m-1 border-0">Eventos pasados</h2>
 </div>
@@ -172,5 +172,5 @@
     </div>
     @endforeach
 </div>
-    {{ $events->links() }}
+    {{ $eventsPast->links() }}
     @endsection
