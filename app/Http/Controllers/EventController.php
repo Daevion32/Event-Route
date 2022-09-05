@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use  App\Models\Event;
 use App\Models\User;
-use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth;
 
 
 class EventController extends Controller
@@ -17,15 +18,11 @@ class EventController extends Controller
      */
     public function index()
     {
-        //
-       /*  $events = Event::get();  */
-/*  */
+        $events = Event::paginate(3);
         $eventsPast = Event::whereDate('date', '<=', now())->get();
         $eventsFut = Event::whereDate('date', '>=', now())->get();
 
-        $events = Event::whereDate('date', '>=', now()->subDays(30))->get();
-
-        return view('home', compact('eventsPast', 'eventsFut'));
+        return view('home', compact('eventsPast', 'eventsFut', 'events'));
     }
 
     /**
