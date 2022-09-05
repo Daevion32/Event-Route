@@ -22,7 +22,6 @@ return new class extends Migration
             $table->integer("spaces");
             $table->string("location",250);
             $table->string("date");
-            $table->string("musical_genre",250);
 
             $table->timestamps();
         });
