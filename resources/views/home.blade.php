@@ -45,7 +45,7 @@
             </div>
             <div class="col-md-8">
                 <div class="container_title">
-                    <h1 class="card-title">{{ $event->name}}</h1>
+                    <h1 class="card-title">{{ $event->name}} <span>No Disponible</span></h1>
                     @if(Auth::check() && Auth::user()->isAdmin)
                     <div class="icon_title">
                         <a id=“editButton” href="{{ route('editEvent', ['id' => $event->id]) }}">
