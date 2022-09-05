@@ -115,7 +115,7 @@
 <div class="container_cards ">
     @foreach ($eventsPast as $event)
     <div class="card text-bg-dark mb-3 card_all" style="max-width: 540px;">
-        <div class="row g-0 opacity-50">
+        <div class="row g-0 opacity-25">
             <div class="col-md-4 container_image">
                 <a href="{{ route('showEvent',$event->id) }}">
                     <img src=" {{ $event->image}} " class="img-fluid rounded-start imagecard" alt="image">
