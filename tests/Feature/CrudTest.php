@@ -7,6 +7,7 @@ use App\Models\User;
 use GuzzleHttp\Promise\Create;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Support\Facades\Auth;
 use Tests\TestCase;
 
 
@@ -64,7 +65,7 @@ class CrudTest extends TestCase
                 'spaces' => 'spaces',
                 'location' => 'location',
                 'date' => 'date',
-                'musical_genre' => 'musical_genre'
+                
         ]);
         $this->assertCount(1, Event::all());
 
@@ -97,14 +98,12 @@ class CrudTest extends TestCase
         $this->withExceptionHandling();
         $event = Event::factory()->create();
         $user = User::factory()->create();
+            
+        $response = $this->get(route('inscribe', $user->id ,$event->id));
         $this->actingAs($user);
-        $response = $this->get(route('inscribe',$user->id , $event->id));
-
-        $this->assertEquals($user->id,$event->user->id);
-
-    
-
-
+        $response->assertStatus(302);
+                
+        $response->assertSee('');
     }
 
     public function test_a_user_can_cancelInscription(){
@@ -112,12 +111,10 @@ class CrudTest extends TestCase
         $user = User::factory()->create();
         $event = Event::factory()->create();
         $response = $this->get(route('cancelInscription', $user->id, $event->id));
-        $response->assertOk()
-                ->assertViewIs('cancelInscription');
-        $response->assertSee('cancelInscription');
-
-
-
+        $this->actingAs($user);
+        $response->assertStatus(302);
+                
+        $response->assertSee('');
 
     }
 }

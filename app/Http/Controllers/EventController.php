@@ -122,7 +122,7 @@ class EventController extends Controller
         $user = User::find(Auth::id());
         $event = Event::find($id);
 
-        $user->event()->attach($event);
+        $user->event($id)->attach($event);
 
         return redirect()->route('home');
     }
