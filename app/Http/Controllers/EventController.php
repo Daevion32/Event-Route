@@ -4,8 +4,15 @@ namespace App\Http\Controllers;
 
 use  App\Models\Event;
 use App\Models\User;
+use App\Notifications\InscriptionEmail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+/*use Illuminate\Support\Facades\Mail;
+use Illuminate\Contracts\Mail\Mailable;
+use App\Mail\ConfirmationMail; 
+use Illuminate\Contracts\Mail\Mailable;
+ */
+
 
 class EventController extends Controller
 {
@@ -23,9 +30,8 @@ class EventController extends Controller
         return view('home', compact('events'));
     }
 
-    public function sendConfirmationEmail() {
-        
-    }
+
+
     /**
      * Show the form for creating a new resource.
      *
@@ -118,17 +124,28 @@ class EventController extends Controller
         return redirect()->route('home');
     
     }
-    
+
+    /* public function sendEmailConfirmation($user, $event)
+    {
+/*         $user = User::attach($event);
+    Mail::to($user->email)->send(new ConfirmationMail($user, $event));
+        $user = User::find($user->id);
+        $event = Event::find($event->id);
+        $mailable = new ConfirmationMail($user, $event);
+        Mail::to($user->email)->send($mailable); 
+    }
+ */
     public function inscribe($id)
     {
 
         $user = User::find(Auth::id());
         $event = Event::find($id);
-
         $user->event()->attach($event);
-
         return redirect()->route('home');
+        
     }
+
+
 
     public function cancelInscription($id)
     {

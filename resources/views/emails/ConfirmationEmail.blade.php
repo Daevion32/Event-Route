@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>¡Todo perfecto!</h1>
-<p>Hola, {{$user->name}}, ya estás registrado en el evento {{$event->name}}</p>
+<p>¡Hola! ya estás registrado en el evento. Puedes ver los eventos en que te has registrado en {{route('eventRegister')}}.</p> 
 <p>¡Disfrútalo!</p>
 
 </body>

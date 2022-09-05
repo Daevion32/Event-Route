@@ -114,8 +114,8 @@
                     <div class="h-10 px-6 font-semibold rounded-md bg-red text-white button_space" type="submit"> {{ $event-> spaces}} pax</div>
 
                     @if(Auth::check() && $event->spaces >= 0)
-                    <button method="post" onclick="return confirm ('Acabas de inscribirte de el evento {{$event->name}}')" class="btn btn-warning button_add" type="submit">
-                        <a href="{{ route('inscribe', $event->id)}}">Check In</a>
+                    <button method="post" onclick="return confirm('Te has registrado en el evento')" class="btn btn-warning button_add" type="submit">
+                        <a href="{{ route('inscribe') }}">Check In</a>
                     </button>
                     
 
