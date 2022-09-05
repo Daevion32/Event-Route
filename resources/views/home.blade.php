@@ -87,11 +87,11 @@
 
 
                     <button method="post" onclick="return confirm ('Acabas de inscribirte de el evento {{$event->name}}')" class="btn btn-warning button_add" type="submit">
-                        <a href="{{ route('inscribe', $event->id)}}">Check In</a>
+                        <a style="color:black; text-decoration:none" href="{{ route('inscribe', $event->id)}}">¡Me apunto!</a>
                     </button>
 
-                    <button method="post" onclick="return confirm ('Acabas de desinscribirte de el evento {{$event->name}}')" class="btn btn-warning button_add" type="submit">
-                        <a href="{{ route('cancelInscription', $event->id)}}">Check Out</a>
+                    <button method="post" onclick="return confirm ('Acabas de desinscribirte de el evento {{$event->name}}')" class="btn button_add" style="background-color:grey" type="submit">
+                        <a style="color:white; text-decoration:none" href="{{ route('cancelInscription', $event->id)}}">Ya no voy</a>
                     </button>
                     @if(Auth::check() && Auth::user()->isAdmin)
                     <button class="addButtonSlider btn btn-dark btn-sm" onclick="return confirm ('Deseas Agregar la imagen de {{$event->name}} al Slider? ')" class="btn btn-warning button_add" type="submit">
@@ -159,13 +159,7 @@
                     <p class="card-text">{{ $event->location}} {{ $event->musical_genre}}</p>
                 </div>
                 <div class="space-x-2 flex  container_spaces">
-                    <button class="h-10 px-6 font-semibold rounded-md bg-red text-white button_space" type="submit"> {{ $event-> spaces}} pax</button>
-                    <button method="post" onclick="return confirm ('Acabas de inscribirte de el evento {{$event->name}}')" class="btn btn-warning button_add" type="submit">
-                        <a href="{{ route('inscribe', $event->id)}}">Check Inn</a>
-                    </button>
-                    <button method="post" onclick="return confirm ('Acabas de desinscribirte de el evento {{$event->name}}')" class="btn btn-warning button_add" type="submit">
-                        <a href="{{ route('cancelInscription', $event->id)}}">Check Out</a>
-                    </button>
+                    
                     @if(Auth::check() && Auth::user()->isAdmin)
                     <a class="addButtonSlider">
                         <svg class="icon_add" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
