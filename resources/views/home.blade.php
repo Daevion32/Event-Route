@@ -23,7 +23,7 @@
         </div>
     </div>
 </div>
-<br><br>
+<br>
 <div div class="newEvent ">
     @if(Auth::check() && Auth::user()->isAdmin)
     <button class="btn btn-warning button_new">
