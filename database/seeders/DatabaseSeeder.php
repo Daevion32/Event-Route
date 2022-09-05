@@ -25,19 +25,23 @@ class DatabaseSeeder extends Seeder
         Event::factory()->create([
             'name' => 'Boombastic', 'description' => 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old',
             'image' => 'https://festibulo.files.wordpress.com/2022/08/captura-6.jpg?w=688',
-            'spaces' => '300', 'location' => 'España/Asturias',
+            'spaces' => '0', 'date' => '2022-06-14','location' => 'España/Asturias',
+        ]);
+        Event::factory()->create([
+            'name' => 'Boombastic', 'description' => 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old',
+            'image' => 'https://festibulo.files.wordpress.com/2022/08/captura-6.jpg?w=688',
+            'spaces' => '0', 'date' => '2023-06-14','location' => 'España/Asturias',
         ]);
         Event::factory()->create([
             'name' => 'Pal Mundo', 'description' => 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.',
             'image' => 'https://partyflock.nl/images/party/262189_1200x1693_336204/Festival-Pal-Mundo.webp',
-            'spaces' => '80', 'location' => 'Holanda/Den Haag, 2533',
+            'spaces' => '80', 'date' => '2023-06-14', 'location' => 'Holanda/Den Haag, 2533',
 
         ]);
         Event::factory()->create([
             'name' => 'Primavera', 'description' => 'dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem ',
             'image' => 'https://etheriamagazine.com/wp-content/uploads/2019/02/Festivales-primavera-trompetera.jpg',
-            'spaces' => '100', 'location' => 'Jerez/España',
-
+            'spaces' => '100', 'date' => '2022-06-14', 'location' => 'Jerez/España',
         ]);
         Event::factory()->create([
             'name' => 'Nirvana', 'description' => '“Nor is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but occasionally circumstance',
@@ -67,8 +71,8 @@ class DatabaseSeeder extends Seeder
             'name' => 'Green Day', 'description' => ' Condimentum etiam magnis accumsan integer fermentum nostra semper a lobortis, metus gravida ligula fringil',
             'image' => 'https://static.posters.cz/image/750/posters/green-day-dookie-i108319.jpg',
             'spaces' => '300', 'location' => 'Alemania/Munchen',
-
         ]);
+
         Event::factory()->create([
             'name' => 'Tomorrow Land', 'description' => 'aqui se dejara una breve descripcion del evento',
             'image' => 'https://i.pinimg.com/originals/56/fb/30/56fb306e2b834858c432604cbb2324fd.jpg',

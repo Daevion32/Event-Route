@@ -34,6 +34,7 @@
 
     <div class="container_cards">
         @foreach ($events as $event)
+        @if($event->date > now())
         <div class="card text-bg-dark mb-3 card_all" style="max-width: 540px;">
             <div class="row g-0">
                 <div class="col-md-4 container_image">
@@ -42,7 +43,7 @@
                 <div class="col-md-8">
                     <div class="container_title">
                         <h1 class="card-title">{{ $event->name}}</h1>
-
+                        
                         @if(Auth::check() && Auth::user()->isAdmin)                                  
                         <div class="icon_title">
                                     <a id=“editButton” href="{{ route('editEvent', ['id' => $event->id]) }}">
@@ -66,7 +67,6 @@
                         @endif
                         </div>
                     </div>
-                
                     <div class="space-x-2 flex text-sm container_date">
                         <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12.75 2.66675H4.25C2.68519 2.66675 1.41667 3.86066 1.41667 5.33341V12.0001C1.41667 13.4728 2.68519 14.6667 4.25 14.6667H12.75C14.3148 14.6667 15.5833 13.4728 15.5833 12.0001V5.33341C15.5833 3.86066 14.3148 2.66675 12.75 2.66675Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -105,6 +105,7 @@
                 </div>
             </div>
         </div>
+        @endif
         @endforeach
     </div>
     @if(Auth::check() && Auth::user()->isAdmin)                                  

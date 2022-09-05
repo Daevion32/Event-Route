@@ -24,8 +24,7 @@ class EventFactory extends Factory
             "image" => $this->faker->Image(),
             "spaces" => $this->faker->biasedNumberBetween($min = 10, $max = 20, $function = 'sqrt'),
             "location" => $this->faker->Address(),
-            "date"=> $this->faker->DateTime(),
-            "musical_genre" => $this->faker->company()
+            "date"=> $this->faker->Date(),
             
         ];
     }

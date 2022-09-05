@@ -128,12 +128,8 @@ class EventController extends Controller
     
     public function inscribe($id)
     {
-
         $user = User::find(Auth::id());
         $event = Event::find($id);
-
-        $user->event()->attach($event);
-
         return redirect()->route('home');
     }
 
@@ -156,6 +152,7 @@ class EventController extends Controller
         return view('eventRegister', compact('event_user'));
     }
 
+   
 
 
 }
