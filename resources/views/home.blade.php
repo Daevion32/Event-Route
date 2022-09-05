@@ -107,7 +107,7 @@
     @endforeach
 </div>
 <br>
-{{ $events->links() }}
+{{ $eventsFut->links() }}
 <div class="text-bg-light p-3 container_cards">
     <h2 class="p-2 m-1 border-0">Eventos pasados</h2>
 </div>
@@ -176,5 +176,5 @@
     </div>
     @endforeach
 </div>
-    {{ $events->links() }}
+    {{ $eventsPast->links() }}
     @endsection

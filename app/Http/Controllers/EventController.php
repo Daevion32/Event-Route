@@ -18,11 +18,11 @@ class EventController extends Controller
      */
     public function index()
     {
-        $events = Event::paginate(3);
-        $eventsPast = Event::whereDate('date', '<=', now())->get();
-        $eventsFut = Event::whereDate('date', '>=', now())->get();
+        
+        $eventsPast = Event::whereDate('date', '<=', now())->Paginate(4);
+        $eventsFut = Event::whereDate('date', '>=', now())->Paginate(4);
 
-        return view('home', compact('eventsPast', 'eventsFut', 'events'));
+        return view('home', compact('eventsPast', 'eventsFut'));
     }
 
     /**
