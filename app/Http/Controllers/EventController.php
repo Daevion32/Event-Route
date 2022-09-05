@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use  App\Models\Event;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 
@@ -17,13 +18,14 @@ class EventController extends Controller
     public function index()
     {
         //
-        $events = Event::paginate(3);
+       /*  $events = Event::get();  */
+/*  */
+        $eventsPast = Event::whereDate('date', '<=', now())->get();
+        $eventsFut = Event::whereDate('date', '>=', now())->get();
 
-        // $events = Event::whereDate('date', '>=', now()->subDays(30))->get();
+        $events = Event::whereDate('date', '>=', now()->subDays(30))->get();
 
-    
-
-        return view('home', compact('events'));
+        return view('home', compact('eventsPast', 'eventsFut'));
     }
 
     /**
@@ -75,9 +77,8 @@ class EventController extends Controller
     public function show($id)
     {
         //
-            $event = Event::find($id);
-            return view ('showEvent', compact('event',));
-     
+        $event = Event::find($id);
+        return view('showEvent', compact('event',));
     }
 
     /**
@@ -116,7 +117,6 @@ class EventController extends Controller
     {
         Event::destroy($id);
         return redirect()->route('home');
-    
     }
     
     public function inscribe($id)
@@ -142,7 +142,14 @@ class EventController extends Controller
         return  redirect()->route('home');
     }
 
-    public function eventRegister()
+    public function slider($id)
+    {
+        $event = Event::find($id);
+        return view('editEvent', compact('event'));
+    }
+
+
+    public function eventRegistrer()
     {
         $user = User::find(Auth::id());
         $event_user = ($user->event);
