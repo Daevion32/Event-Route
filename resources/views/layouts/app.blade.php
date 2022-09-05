@@ -47,7 +47,6 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul style="display: flex; align-items: center" class="navbar-nav ms-auto">
-                        <!-- Authentication Links -->
                         @guest
                         <li class="nav-item dropdown">
                         <a style="color: white;" id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre><svg width="40" height="40" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -96,6 +95,7 @@
                                     Evento</a>
                             </li>
                         @endif
+                    
                     </ul>
 
 
