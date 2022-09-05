@@ -93,13 +93,27 @@ class CrudTest extends TestCase
     }
         
 
-     public function test_a_user_can_inscribe(){
+    public function test_a_user_can_inscribe(){
+        $this->withExceptionHandling();
+        $event = Event::factory()->create();
+        $user = User::factory()->create();
+            
+        $response = $this->get(route('inscribe', $user->id ,$event->id));
+        $this->actingAs($user);
+        $response->assertStatus(302);
+                
+        $response->assertSee('');
+    }
+
+    public function test_a_user_can_cancelInscription(){
         $this->withExceptionHandling();
         $user = User::factory()->create();
         $event = Event::factory()->create();
-        $response = $this->get(route('inscribe'), $user->id, $event->id );
-    //     $response->assertStatus(200)
-    //             ->assertViewIs('inscribe');
-    //     $response->assertSee('inscription');
-    // }
+        $response = $this->get(route('cancelInscription', $user->id, $event->id));
+        $this->actingAs($user);
+        $response->assertStatus(302);
+                
+        $response->assertSee('');
+
+    }
 }
