@@ -7,12 +7,12 @@
         <ol class="carousel-indicators">
             @method('PATCH')
             @foreach ($eventsFut as $event)
-            <li data-bs-target="#carouselExampleDark" data-bs-slide="{{$event->id}}" class="@if($loop->index==0) active @endif"></li>
+            <li data-bs-target="#carouselExampleDark" data-bs-slide="{{$event->id}}" class="@if($loop->index>=1) active @endif"></li>
             @endforeach
         </ol>
         <div class="carousel-inner">
             @foreach ($eventsFut as $event)
-            <div class="carousel-item @if($loop->index==0) active @endif" data-bs-interval="2000">
+            <div class="carousel-item @if($loop->index<=0) active @endif" data-bs-interval="3000">
                 <img width="800" height="400" src="{{ $event->image}}" class="d-block w-100" alt="Image Event">
                 <div class="carousel-caption d-none d-md-block">
                     <h5 class="title-slider">{{$event->name}}</h5>
