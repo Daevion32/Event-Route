@@ -92,38 +92,39 @@ class DatabaseSeeder extends Seeder
             
         ]);
         Event::factory()->create([
-            'name' => 'AmsterdamLights', 'description' => 'aqui se dejara una breve descripcion del evento',
-            'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG7XzHTB3gCplUxNxrrh83IcDjwEBdyMVlyQ&usqp=CAU',
-            'spaces' => '999', 'location' => 'Holanda',
-            'date'=> '2022-10-01'
+            'name' => 'Aqua Sella', 'description' => 'aqui se dejara una breve descripcion del evento',
+            'image' => 'https://aquasella.com/wp-content/uploads/2022/04/aqs2022_1080x1350-2.png',
+            'spaces' => '999', 'location' => 'Arriondas/Cangas de Onís',
+            'date'=> '2022-09-04',
             
         ]);
         Event::factory()->create([
-            'name' => 'AmsterdamLights', 'description' => 'aqui se dejara una breve descripcion del evento',
-            'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG7XzHTB3gCplUxNxrrh83IcDjwEBdyMVlyQ&usqp=CAU',
-            'spaces' => '999', 'location' => 'Holanda',
-            'date'=> '2022-10-01'
+            'name' => 'Barcelona-Rock-2022', 'description' => 'aqui se dejara una breve descripcion del evento',
+            'image' => ':https://www.dodmagazine.es/wp-content/uploads/2021/05/barcelona-rock-fest-2022.jpg',
+            'spaces' => '40', 'location' => 'Parc de Can Zam de Santa Coloma de Gramanet-Barcelona',
+            'date'=>  '2022-09-04'
             
         ]);
         Event::factory()->create([
-            'name' => 'AmsterdamLights', 'description' => 'aqui se dejara una breve descripcion del evento',
-            'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG7XzHTB3gCplUxNxrrh83IcDjwEBdyMVlyQ&usqp=CAU',
-            'spaces' => '999', 'location' => 'Holanda',
-            'date'=> '2022-10-01'
+            'name' => 'Resurrection Fest 2022', 'description' => 'aqui se dejara una breve descripcion del evento',
+            'image' => 'https://www.hellpress.com/wp-content/uploads/2022/03/resurrection-fest-2022-gojira.jpg',
+            'spaces' => '999', 'location' => 'Lugo-España',
+            'date'=>  '2022-09-04'
             
         ]);
         Event::factory()->create([
-            'name' => 'AmsterdamLights', 'description' => 'aqui se dejara una breve descripcion del evento',
-            'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG7XzHTB3gCplUxNxrrh83IcDjwEBdyMVlyQ&usqp=CAU',
-            'spaces' => '999', 'location' => 'Holanda',
-            'date'=> '2022-10-01'
+            'name' => 'Perfest 2022 ', 'description' => 'aqui se dejara una breve descripcion del evento',
+            'image' => 'https://www.dodmagazine.es/wp-content/uploads/2022/07/perfest-2022.jpg ',
+            'spaces' => '250', 'location' => 'Recinto Ferial Esquivias Toledo ',
+            'date'=>  '2022-09-04'
             
         ]);
         Event::factory()->create([
-            'name' => 'AmsterdamLights', 'description' => 'aqui se dejara una breve descripcion del evento',
-            'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG7XzHTB3gCplUxNxrrh83IcDjwEBdyMVlyQ&usqp=CAU',
-            'spaces' => '999', 'location' => 'Holanda',
-            'date'=> '2022-10-01'
+            'name' => 'San Destival 2022', 'description' => 'aqui se dejara una breve descripcion del evento',
+            'image' => 'https://www.dodmagazine.es/wp-content/uploads/2021/12/sansan-festival-2022-cartel.jpg ',
+            'spaces' => '999', 'location' => 'Recinto de Festivales de Benicàssim
+            ',
+            'date'=>  '2022-09-04'
             
         ]);
          
