@@ -18,7 +18,7 @@ class EventController extends Controller
         //
         /* $events = Event::get(); */
 
-        $events = Event::whereDate('date', '>=', now()->subDays(30))->get();
+        $events = Event::whereDate('date', '<=', now())->get();
 
         //var_dump($events);
         return view('home', compact('events'));

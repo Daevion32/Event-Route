@@ -33,7 +33,6 @@
 
 <div class="container_cards">
     @foreach ($events as $event)
-    @if ($event->date > 0)
     <div class="card text-bg-dark mb-3 card_all" style="max-width: 540px;">
         <div class="row g-0">
             <div class="col-md-4 container_image">
@@ -93,7 +92,6 @@
             </div>
         </div>
     </div>
-    @endif
     @endforeach
 </div>
 
