@@ -108,14 +108,14 @@
 </div>
 <br>
 {{ $events->links() }}
-<div class="container_cards">
+<div class="text-bg-light p-3 container_cards">
     <h2 class="p-2 m-1 border-0">Eventos pasados</h2>
 </div>
 <br>
-<div class="container_cards">
+<div class="container_cards ">
     @foreach ($eventsPast as $event)
-    <div class="card text-bg-dark mb-3 card_all" style="max-width: 540px;">
-        <div class="row g-0">
+    <div class="card text-bg-dark mb-3 card_all " style="max-width: 540px;">
+        <div class="row g-0 opacity-50">
             <div class="col-md-4 container_image">
                 <a href="{{ route('showEvent',$event->id) }}">
                     <img src=" {{ $event->image}} " class="img-fluid rounded-start imagecard" alt="image">
