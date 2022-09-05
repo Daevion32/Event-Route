@@ -146,7 +146,7 @@ class EventController extends Controller
     }
 
 
-    public function eventRegistrer()
+    public function eventRegister()
     {
         $user = User::find(Auth::id());
         $event_user = ($user->event);
