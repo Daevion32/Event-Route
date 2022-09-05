@@ -27,11 +27,11 @@ Route::get('/',[EventController::class, 'index']);
 Route::get('/home', [EventController::class, 'index'])->name('home'); 
 
 //DELETE
-Route::delete('/delete/{id}', [EventController::class, 'destroy'])->name('delete')->middleware('isadmin', 'auth');
+Route::delete('/delete/{id}', [EventController::class, 'destroy'])->name('delete')->middleware('isAdmin', 'auth');
 
 // //CREATE
 
-Route::get('/create',[EventController::class, 'create'])->name('createEvent')->middleware('isadmin', 'auth');
+Route::get('/create',[EventController::class, 'create'])->name('createEvent')->middleware('isAdmin', 'auth');
 Route::post('/',[EventController::class, 'store'])->name('storeEvent');
 
 //SHOW
@@ -40,7 +40,7 @@ Route::get('/show/{id}',[EventController::class, 'show'])->name('showEvent');
 
 //UPDATE
 
-Route::get('/edit/{id}', [EventController::class, 'edit'])->name('editEvent')->middleware('isadmin', 'auth');
+Route::get('/edit/{id}', [EventController::class, 'edit'])->name('editEvent')->middleware('isAdmin', 'auth');
 Route::patch('/event/{id}', [EventController::class, 'update'])->name('updateEvent');
 
 //Inscribirse/desinscribirse
@@ -52,5 +52,3 @@ Route::get('/cancelInscription/{id}', [EventController::class, 'cancelInscriptio
 
 Route::get('/eventRegister', [EventController::class, 'eventRegister'])->middleware('auth')->name('eventRegister');
 
-Route::get('/sliders', [EventController::class, 'slider'])->name('sliders');
-Route::post('sliders', [EventController::class, 'store']);

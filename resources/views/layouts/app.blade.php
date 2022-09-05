@@ -26,7 +26,7 @@
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <!-- {{ config('app.name', 'Laravel') }} -->
-                    <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <svg width="90" height="90" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <rect width="70" height="70" fill="url(#pattern0)" />
                         <defs>
                             <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
@@ -50,6 +50,7 @@
                     <!-- Right Side Of Navbar -->
                     <ul style="display: flex; align-items: center" class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
+                        <ul style="display: flex; align-items: center" class="navbar-nav ms-auto">
                         @guest
                         <li class="nav-item dropdown">
                         <a style="color: white;" id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre><svg width="40" height="40" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -98,15 +99,19 @@
                                     Evento</a>
                             </li>
                         @endif
+                    
                     </ul>
+
+
                 </div>
             </div>
         </nav>
-
-        <main class="py-4">
+        <main class="">
             @yield('content')
+
         </main>
     </div>
+    @stack('scripts')
 </body>
 
 </html>

@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use  App\Models\Event;
-use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class EventController extends Controller
@@ -17,12 +17,11 @@ class EventController extends Controller
     public function index()
     {
         //
-        $events = Event::get();
+        $events = Event::paginate(8);
 
-        //var_dump($events);
+    
 
         return view('home', compact('events'));
-
     }
 
     /**
@@ -56,12 +55,12 @@ class EventController extends Controller
         //         'spaces' => $request->spaces,
         //         'location' =>  $request->location,
         //         'date' => $request->date,
-                
+
         //     ]
         // );
         Event::create($event);
 
-        
+
         return redirect()->route('home');
     }
 
@@ -79,14 +78,6 @@ class EventController extends Controller
         return view ('showEvent', compact('event'));
     }
 
-    public function pastEvents($id)
-    {
-        
-        $event = Event::where($id);
-
-        return view ('showEvent', compact('event'));
-    }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -96,7 +87,7 @@ class EventController extends Controller
     public function edit($id)
     {
         $event = Event::find($id);
-        return view ('editEvent', compact('event'));
+        return view('editEvent', compact('event'));
     }
 
     /**
@@ -110,7 +101,7 @@ class EventController extends Controller
     {
         $event = request()->except(['_token', '_method']);
         Event::where('id', '=', $id)->update($event);
-        return redirect()->route('home');  
+        return redirect()->route('home');
     }
 
     /**
