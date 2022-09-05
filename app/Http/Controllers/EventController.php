@@ -17,9 +17,9 @@ class EventController extends Controller
     public function index()
     {
         //
-        /* $events = Event::paginate(3); */
+        $events = Event::paginate(3);
 
-        $events = Event::whereDate('date', '>=', now()->subDays(30))->get();
+        // $events = Event::whereDate('date', '>=', now()->subDays(30))->get();
 
     
 
