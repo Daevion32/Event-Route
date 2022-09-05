@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use  App\Models\Event;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth;
 
 
 class EventController extends Controller
@@ -16,14 +18,11 @@ class EventController extends Controller
      */
     public function index()
     {
-        //
-        /* $events = Event::paginate(3); */
+        $events = Event::paginate(3);
+        $eventsPast = Event::whereDate('date', '<=', now())->get();
+        $eventsFut = Event::whereDate('date', '>=', now())->get();
 
-        $events = Event::whereDate('date', '>=', now()->subDays(30))->get();
-
-    
-
-        return view('home', compact('events'));
+        return view('home', compact('eventsPast', 'eventsFut', 'events'));
     }
 
     /**
@@ -75,9 +74,8 @@ class EventController extends Controller
     public function show($id)
     {
         //
-            $event = Event::find($id);
-            return view ('showEvent', compact('event',));
-     
+        $event = Event::find($id);
+        return view('showEvent', compact('event',));
     }
 
     /**
@@ -116,7 +114,6 @@ class EventController extends Controller
     {
         Event::destroy($id);
         return redirect()->route('home');
-    
     }
     
     public function inscribe($id)
@@ -141,6 +138,13 @@ class EventController extends Controller
 
         return  redirect()->route('home');
     }
+
+    public function slider($id)
+    {
+        $event = Event::find($id);
+        return view('editEvent', compact('event'));
+    }
+
 
     public function eventRegister()
     {
