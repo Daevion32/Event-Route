@@ -31,12 +31,25 @@ El administrador podrá editar y borrar eventos, así como crear eventos nuevos 
 3. Crear un archivo .env que contenga la misma información que el archivo .env.example, a excepción del nombre de la base de datos: 
     db_database: event-route
 
+4. Ejecutar los siguientes comandos: 
+`php artisan migrate:fresh --seed` 
+<br>
+
+5. En una terminal nueva, ejecutar:
+`npm run dev` 
+<br>
+
+6. En una terminal nueva, ejecutar:
+`php artisan serve`
+
 
 ## Stack used
 
-
+PHP Laravel 9 + Bootstrap + Tailwind
 
 ### Previews
+
+
 
 
 
