@@ -31,10 +31,6 @@
       <input type="text" class="form-control" id="inputSpaces" name="spaces" value="{{ $event->spaces }}">
     </div>
     <div class="mb-3">
-      <label for="inputGenre" class="form-label-edit">Genero Musical</label>
-      <input type="text" class="form-control" id="inputGenre" name="musical_genre" value="{{ $event->musical_genre }}">
-    </div>
-    <div class="mb-3">
       <label for="inputImage" class="form-label-edit">Imagen</label>
       <input type="text" class="form-control" id="inputImage" name="image" value="{{ $event->image }}">
     </div>
